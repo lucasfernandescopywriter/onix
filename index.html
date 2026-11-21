@@ -1,0 +1,2046 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Marmoraria Ônix | Matão & Região — A Arte da Rocha Sob Medida</title>
+    <meta name="description" content="Marmoraria Ônix em Matão e Dobrada/SP. Especialistas em bancadas, ilhas gourmet, lavatórios esculpidos e rochas nobres com acabamento em corte 45°. Atendemos Matão, Araraquara, São Carlos, Ribeirão Preto e região.">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+
+    <!-- Open Graph / Meta -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Marmoraria Ônix">
+    <meta property="og:title" content="Marmoraria Ônix | A Arte da Rocha Sob Medida">
+    <meta property="og:description" content="Mármores nobres, granitos selecionados e quartzitos exóticos com acabamento de alta precisão em Matão, Dobrada e região.">
+    <meta property="og:image" content="assets/images/portfolio_hq/hero-bg.jpg">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo-onix.svg">
+
+        <!-- Preload Hero LCP Image -->
+    <link rel="preload" as="image" href="assets/images/portfolio_hq/hero-bg.jpg" fetchpriority="high">
+    <!-- Google Fonts: Outfit & Sora (Poplawski Design System) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&family=Sora:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Poplawski Design System Stylesheets -->
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+
+    <style>
+        /* ========================================================
+           DESIGN SYSTEM INTEGRATION & ZERO-DEFECT CONTRAST
+           Aligned 100% with Poplawski Luxury Standards
+           ======================================================== */
+        :root {
+            --gold: #ca8a04;
+            --gold-light: #eab308;
+            --terracotta: #b25938;
+            --accent: #885e46;
+            --accent-light: #cfbfb0;
+            --charcoal: #111111;
+            --dark-card: #141414;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: #080808;
+            color: #ede8e2;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .section-title, .hero-heading, .service-number, .stat-num {
+            font-family: 'Sora', sans-serif;
+        }
+
+        /* Hero height bounds for responsive and headless fidelity */
+        .hero {
+            height: 100vh;
+            min-height: 700px;
+            max-height: 940px;
+            position: relative;
+            overflow: hidden;
+            background: #000;
+        }
+        .hero-label, .hero-heading, .hero-desc, .hero-actions, .reveal {
+            opacity: 1 !important;
+            transform: none !important;
+        }
+
+        /* Navbar Logo Toggle Specificity */
+        .nav-logo img {
+            height: 38px;
+            width: auto;
+        }
+        .nav-logo-dark {
+            display: none !important;
+        }
+        .nav.scrolled .nav-logo-white {
+            display: none !important;
+        }
+        .nav.scrolled .nav-logo-dark {
+            display: block !important;
+        }
+
+        /* ========================================================
+           SECTION 1: PROJETOS (WHITE BACKGROUND) - CONTRAST FIX
+           ======================================================== */
+        .properties {
+            background: #ffffff;
+            color: #111111;
+            padding: 7rem 0;
+        }
+        .properties .section-title {
+            color: #111111 !important;
+        }
+        .properties .section-label {
+            color: var(--gold) !important;
+        }
+        .properties .section-subtitle {
+            color: #555555 !important;
+        }
+
+        
+        /* ========================================================
+           SECTION 1: PROPERTY CARDS (LUXURY ARCHITECTURAL SYSTEM)
+           Zero white gap, full-bleed imagery, refined gradient overlay
+           ======================================================== */
+        .properties-grid {
+            display: grid !important;
+            grid-template-columns: repeat(3, 1fr) !important;
+            gap: 1.5rem !important;
+        }
+        .property-card {
+            position: relative !important;
+            overflow: hidden !important;
+            border-radius: 8px !important;
+            background: #0d0d0d !important;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+            transition: transform 0.4s ease, box-shadow 0.4s ease !important;
+            text-decoration: none !important;
+            display: block !important;
+        }
+        .property-card:hover {
+            transform: translateY(-4px) !important;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22) !important;
+        }
+        .property-card.featured {
+            grid-column: span 2 !important;
+        }
+        .property-image-wrap {
+            position: relative !important;
+            width: 100% !important;
+            aspect-ratio: 4 / 3 !important;
+            overflow: hidden !important;
+            background: #111 !important;
+        }
+        .property-card.featured .property-image-wrap {
+            aspect-ratio: 16 / 9 !important;
+        }
+        .property-card .property-image {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            display: block !important;
+            transition: transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+        }
+        .property-card:hover .property-image {
+            transform: scale(1.05) !important;
+        }
+        .property-badges {
+            position: absolute !important;
+            top: 1.2rem !important;
+            left: 1.2rem !important;
+            z-index: 3 !important;
+            display: flex !important;
+            gap: 0.4rem !important;
+        }
+        .property-badge {
+            background: var(--gold) !important;
+            color: #ffffff !important;
+            font-family: 'Sora', sans-serif !important;
+            font-size: 0.62rem !important;
+            font-weight: 600 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.15em !important;
+            padding: 0.45rem 0.9rem !important;
+            border-radius: 4px !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.45) !important;
+        }
+        .property-info {
+            position: absolute !important;
+            bottom: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            z-index: 2 !important;
+            padding: 5rem 1.6rem 1.6rem !important;
+            background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 45%, rgba(0,0,0,0.15) 80%, transparent 100%) !important;
+            color: #ffffff !important;
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 0.35rem !important;
+            pointer-events: none !important;
+            opacity: 1 !important;
+            transform: none !important;
+        }
+        .property-location {
+            font-family: 'Sora', sans-serif !important;
+            font-size: 0.62rem !important;
+            font-weight: 600 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.2em !important;
+            color: var(--gold-light) !important;
+            display: flex !important;
+            align-items: center !important;
+            gap: 0.4rem !important;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.9) !important;
+        }
+        .property-location i {
+            color: var(--gold) !important;
+        }
+        .property-type {
+            font-family: 'Outfit', sans-serif !important;
+            font-size: 1.15rem !important;
+            font-weight: 400 !important;
+            color: #ffffff !important;
+            line-height: 1.35 !important;
+            margin: 0 !important;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.9) !important;
+        }
+        .property-card.featured .property-type {
+            font-size: 1.55rem !important;
+            font-weight: 400 !important;
+        }
+        .property-details {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            gap: 0.5rem 1.2rem !important;
+            font-size: 0.72rem !important;
+            color: rgba(255, 255, 255, 0.88) !important;
+            margin-top: 0.2rem !important;
+        }
+        .property-details span {
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 0.35rem !important;
+        }
+        .property-details i {
+            color: var(--gold-light) !important;
+            font-size: 0.7rem !important;
+        }
+
+        @media (max-width: 1024px) {
+            .properties-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+        @media (max-width: 768px) {
+            .properties-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1.2rem !important;
+            }
+            .property-card.featured {
+                grid-column: span 1 !important;
+            }
+            .property-card.featured .property-image-wrap,
+            .property-card:not(.featured) .property-image-wrap {
+                aspect-ratio: 4 / 3 !important;
+            }
+            .property-card.featured .property-type {
+                font-size: 1.25rem !important;
+            }
+        }
+
+        /* Dedicated High-Contrast Project Filter Buttons (White Section) */
+        .project-filters-bar {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin: 1.8rem 0 3rem;
+        }
+        .project-filter-btn {
+            background: transparent;
+            border: 1px solid rgba(0, 0, 0, 0.16);
+            color: #222222;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.78rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.55rem 1.4rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            font-weight: 500;
+        }
+        .project-filter-btn:hover {
+            color: #000000;
+            border-color: var(--gold);
+            background: rgba(202, 138, 4, 0.08);
+        }
+        .project-filter-btn.active {
+            background: var(--gold);
+            color: #ffffff;
+            font-weight: 600;
+            border-color: var(--gold);
+            box-shadow: 0 4px 14px rgba(202, 138, 4, 0.3);
+        }
+
+        /* ========================================================
+           SECTION 2: PROCESS (01-06) GRID & CHECKLIST
+           ======================================================== */
+        .services-grid-process {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            margin-top: 3.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .services-grid-process .service-item {
+            border-right: 1px solid rgba(255, 255, 255, 0.08);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 3rem 2.2rem;
+            position: relative;
+            background: transparent;
+            transition: all 0.35s ease;
+            text-decoration: none;
+            display: block;
+            color: inherit;
+        }
+        .services-grid-process .service-item:nth-child(3n) {
+            border-right: none;
+        }
+        .services-grid-process .service-item:nth-child(n+4) {
+            border-bottom: none;
+        }
+        .services-grid-process .service-item:hover {
+            background: rgba(255, 255, 255, 0.03);
+        }
+        .services-grid-process .service-item:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transition: transform 0.35s ease;
+        }
+        .services-grid-process .service-item:hover:before {
+            transform: scaleX(1);
+        }
+        .services-grid-process .service-number {
+            font-size: 3.8rem;
+            font-weight: 200;
+            line-height: 1;
+            margin-bottom: 1.2rem;
+            background: linear-gradient(180deg, var(--gold) 0%, rgba(202, 138, 4, 0.25) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .services-grid-process .service-title {
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-bottom: 0.8rem;
+        }
+        .services-grid-process .service-desc {
+            color: rgba(255, 255, 255, 0.65);
+            font-size: 0.85rem;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        /* "O que reunir" Checklist Block (within Services section) */
+        .process-checklist-wrap {
+            margin-top: 4.5rem;
+            padding: 3.5rem 3rem;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+        }
+        .process-checklist-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 3.5rem;
+            align-items: start;
+        }
+        .checklist-items {
+            display: grid;
+            grid-template-columns: 1fr;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            padding: 1.15rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            color: #ede8e2;
+            font-size: 0.95rem;
+            font-weight: 300;
+        }
+        .checklist-icon {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: rgba(202, 138, 4, 0.15);
+            border: 1px solid rgba(202, 138, 4, 0.35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 0.75rem;
+            flex-shrink: 0;
+        }
+        .checklist-note {
+            margin-top: 1.8rem;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.5);
+            font-style: italic;
+            border-left: 2px solid var(--gold);
+            padding-left: 0.8rem;
+        }
+
+        /* ========================================================
+           SECTION 3: SOLUÇÕES SOB MEDIDA - 100% CONTRAST FIX
+           ======================================================== */
+        .specialties-section {
+            background: #0b0b0b;
+            padding: 7rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .specialties-section .section-title {
+            color: #ffffff !important;
+        }
+        .specialties-section .section-label {
+            color: var(--gold) !important;
+        }
+        .specialties-section .section-subtitle {
+            color: rgba(255, 255, 255, 0.75) !important;
+        }
+        .specialties-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 3.5rem;
+        }
+        .specialty-card {
+            background: #141414;
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 6px;
+            padding: 2.4rem 1.9rem;
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .specialty-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(202, 138, 4, 0.45);
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+        }
+        .specialty-icon {
+            font-size: 1.8rem;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+        }
+        .specialty-title {
+            color: #ffffff !important;
+            font-size: 1.15rem;
+            font-weight: 500;
+            margin-bottom: 0.8rem;
+        }
+        .specialty-desc {
+            color: rgba(255, 255, 255, 0.68) !important;
+            font-size: 0.84rem;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        /* ========================================================
+           SECTION 4: QUEM SOMOS (WHITE BACKGROUND) - CONTRAST FIX
+           ======================================================== */
+        .about {
+            background: #ffffff;
+            color: #111111;
+            padding: 7rem 0;
+        }
+        .about .section-title {
+            color: #111111 !important;
+        }
+        .about .section-label {
+            color: var(--gold) !important;
+        }
+        .about .about-text {
+            color: #444444 !important;
+            line-height: 1.9;
+        }
+        .about .about-stats {
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            padding: 1.6rem 0;
+            margin-top: 2rem;
+            display: flex;
+            gap: 2rem;
+        }
+        .about .stat-item {
+            flex: 1;
+        }
+        .about .stat-num {
+            color: #111111 !important;
+            font-family: 'Sora', sans-serif;
+            font-size: 1.9rem;
+            font-weight: 600;
+            line-height: 1;
+            display: block;
+            margin-bottom: 0.35rem;
+        }
+        .about .stat-label {
+            color: #666666 !important;
+            font-family: 'Sora', sans-serif;
+            font-size: 0.62rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            font-weight: 600;
+            display: block;
+        }
+
+        /* Two Stacked Images in About */
+        .about-image-wrap {
+            position: relative;
+        }
+        .about-image {
+            width: 100%;
+            aspect-ratio: 4/5;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        .about-image-stack {
+            position: absolute;
+            bottom: -2rem;
+            right: -2rem;
+            width: 65%;
+            aspect-ratio: 16/10;
+            object-fit: cover;
+            border: 8px solid #ffffff;
+            border-radius: 4px;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.22);
+            z-index: 2;
+        }
+        .about-image-accent {
+            position: absolute;
+            top: -1.5rem;
+            left: -1.5rem;
+            width: 50%;
+            height: 50%;
+            border: 2px solid var(--gold);
+            z-index: -1;
+            border-radius: 4px;
+        }
+
+        /* ========================================================
+           SECTION 5: CIDADES ATENDIDAS - RESPONSIVE & MOBILE CASCATA
+           ======================================================== */
+        .regions {
+            background: #f7f6f2;
+            padding: 6.5rem 0;
+        }
+        .regions .section-title {
+            color: #111111 !important;
+        }
+        .regions .section-label {
+            color: var(--gold) !important;
+        }
+        .regions .section-subtitle {
+            color: #555555 !important;
+        }
+        .regions-grid-luxury {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.4rem;
+            padding: 0 2rem;
+        }
+        .region-card-luxury {
+            position: relative;
+            height: 380px;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        .region-card-luxury:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.16);
+        }
+        .region-card-luxury img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s ease;
+        }
+        .region-card-luxury:hover img {
+            transform: scale(1.06);
+        }
+        .region-card-luxury-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.3) 45%, rgba(0,0,0,0.92) 100%);
+            transition: background 0.3s ease;
+        }
+        .region-card-luxury-content {
+            position: absolute;
+            bottom: 1.4rem;
+            left: 1.4rem;
+            right: 1.4rem;
+            z-index: 2;
+        }
+        .region-card-city {
+            color: #ffffff;
+            font-family: 'Sora', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+        }
+        .region-card-sub {
+            color: var(--gold-light);
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        .region-card-scope {
+            color: rgba(255, 255, 255, 0.78);
+            font-size: 0.76rem;
+            line-height: 1.5;
+            font-weight: 300;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            padding-top: 0.5rem;
+        }
+
+        /* ========================================================
+           SECTION 6: CATÁLOGO DE PEDRAS (LAYOUT IDÊNTICO AO GRANOS)
+           White/Off-White Gallery Aesthetics Matching Image 6
+           ======================================================== */
+        .materials-section-granos {
+            background: #ffffff;
+            padding: 7rem 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.06);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        }
+        .materials-section-granos .section-title {
+            color: #111111 !important;
+        }
+        .materials-section-granos .section-label {
+            color: var(--terracotta) !important;
+        }
+        .materials-section-granos .section-subtitle {
+            color: #555555 !important;
+        }
+
+        /* Minimalist & Sophisticated Filter Tabs (Granos Style) */
+        .stone-filters-granos {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin: 2.5rem 0 3.5rem;
+        }
+        .stone-filter-granos-btn {
+            background: transparent;
+            border: 1px solid rgba(0, 0, 0, 0.14);
+            color: #333333;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.78rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.55rem 1.4rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            font-weight: 500;
+        }
+        .stone-filter-granos-btn:hover {
+            color: #000000;
+            border-color: var(--terracotta);
+            background: rgba(178, 89, 56, 0.06);
+        }
+        .stone-filter-granos-btn.active {
+            color: #ffffff;
+            background: var(--terracotta);
+            font-weight: 600;
+            border-color: var(--terracotta);
+            box-shadow: 0 4px 14px rgba(178, 89, 56, 0.28);
+        }
+
+        /* Stones Grid - Matching Exact Card Layout of Image 6 */
+        .stones-grid-granos {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2.2rem 1.8rem;
+        }
+        .stone-granos-card {
+            background: #ffffff;
+            transition: transform 0.35s ease;
+            text-decoration: none;
+            display: block;
+        }
+        .stone-granos-card:hover {
+            transform: translateY(-5px);
+        }
+        .stone-granos-img-wrap {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 4/3;
+            overflow: hidden;
+            background: #f0ede8;
+            border-radius: 2px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+        .stone-granos-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        .stone-granos-card:hover .stone-granos-img-wrap img {
+            transform: scale(1.06);
+        }
+        .stone-granos-cat {
+            color: var(--terracotta);
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            margin-top: 0.9rem;
+            margin-bottom: 0.3rem;
+            display: block;
+        }
+        .stone-granos-title {
+            color: #1a1a1a;
+            font-family: 'Sora', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 400;
+            margin: 0;
+            line-height: 1.25;
+            letter-spacing: -0.01em;
+        }
+
+        /* Floating WhatsApp Button */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: #25d366;
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.7rem;
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+            z-index: 999;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .floating-whatsapp:hover {
+            transform: scale(1.08);
+            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);
+            color: #ffffff;
+        }
+
+        /* ========================================================
+           RESPONSIVE BREAKPOINTS & MOBILE WATERFALL CASCATA
+           ======================================================== */
+        @media (max-width: 1024px) {
+            .services-grid-process {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .services-grid-process .service-item:nth-child(3n) {
+                border-right: 1px solid rgba(255, 255, 255, 0.08);
+            }
+            .services-grid-process .service-item:nth-child(2n) {
+                border-right: none;
+            }
+            .specialties-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .regions-grid-luxury {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .stones-grid-granos {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .process-checklist-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+        @media (max-width: 768px) {
+            /* Mobile Cidades Atendidas em Cascata (1 coluna) */
+            .regions-grid-luxury {
+                grid-template-columns: 1fr !important;
+                gap: 1.4rem !important;
+                padding: 0 1.2rem !important;
+            }
+            .region-card-luxury {
+                height: 260px !important;
+                border-radius: 10px !important;
+            }
+
+            /* Process Mobile 1 Col */
+            .services-grid-process {
+                grid-template-columns: 1fr;
+            }
+            .services-grid-process .service-item {
+                border-right: none !important;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+                padding: 2.2rem 1.5rem;
+            }
+            .specialties-grid {
+                grid-template-columns: 1fr;
+            }
+            .stones-grid-granos {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .about-image-stack {
+                position: static;
+                width: 100%;
+                margin-top: 1rem;
+                aspect-ratio: 16/9;
+                border-width: 4px;
+            }
+            .about-image-accent {
+                display: none;
+            }
+            .about-stats {
+                flex-wrap: wrap;
+                gap: 1.2rem;
+            }
+            .floating-whatsapp {
+                bottom: 1.2rem;
+                right: 1.2rem;
+                width: 52px;
+                height: 52px;
+                font-size: 1.5rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .stones-grid-granos {
+                grid-template-columns: 1fr;
+            }
+        }
+    
+        /* ========================================================
+           PERFORMANCE & FLUID RESPONSIVENESS OPTIMIZATIONS
+           ======================================================== */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Prevent fixed navbar from covering section titles */
+        section[id] {
+            scroll-margin-top: 85px;
+        }
+
+        /* Hardware acceleration and containment */
+        .hero, .property-card, .stone-granos-card, .floating-whatsapp {
+            transform: translateZ(0);
+            -webkit-transform: translateZ(0);
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+
+        /* Content visibility for below-the-fold heavy sections */
+        .materials-section-granos, .regions {
+            content-visibility: auto;
+            contain-intrinsic-size: 1px 700px;
+        }
+
+        /* Hero title & text mobile precision */
+        @media (max-width: 640px) {
+            .hero-heading {
+                font-size: clamp(2.1rem, 7.5vw, 3.2rem) !important;
+                line-height: 1.12 !important;
+                word-break: normal !important;
+                overflow-wrap: break-word !important;
+            }
+            .hero-content {
+                padding: 0 1.25rem !important;
+            }
+            .section-title {
+                font-size: clamp(1.75rem, 6vw, 2.4rem) !important;
+                line-height: 1.2 !important;
+            }
+            .container {
+                padding: 0 1.25rem !important;
+            }
+            /* Stats 2x2 grid on mobile for perfect legibility without overflow */
+            .hero-stats {
+                display: grid !important;
+                grid-template-columns: 1fr 1fr !important;
+                padding: 0 !important;
+                gap: 0 !important;
+            }
+            .hero-stat {
+                border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+                padding: 1rem 0.5rem !important;
+            }
+            .hero-stat:nth-child(2), .hero-stat:nth-child(4) {
+                border-right: none !important;
+            }
+            .hero-stat:nth-child(3), .hero-stat:nth-child(4) {
+                border-bottom: none !important;
+            }
+            .hero-stat-number {
+                font-size: 1.35rem !important;
+            }
+            .hero-stat-label {
+                font-size: 0.52rem !important;
+            }
+            /* Smooth horizontal scroll for category filter tabs */
+            .project-filters, .stone-filters-granos {
+                display: flex !important;
+                flex-wrap: nowrap !important;
+                overflow-x: auto !important;
+                -webkit-overflow-scrolling: touch !important;
+                padding: 6px 4px 12px 4px !important;
+                gap: 8px !important;
+                scrollbar-width: none !important;
+            }
+            .project-filters::-webkit-scrollbar, .stone-filters-granos::-webkit-scrollbar {
+                display: none !important;
+            }
+            .project-filter-btn, .stone-filter-granos-btn {
+                white-space: nowrap !important;
+                flex-shrink: 0 !important;
+            }
+        }
+
+        /* Subtle luxury pulse for floating WhatsApp */
+        @keyframes waPulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+            }
+            70% {
+                box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        .floating-whatsapp {
+            animation: waPulse 2.8s infinite !important;
+        }
+        .floating-whatsapp:hover {
+            animation: none !important;
+        }
+
+        /* Back to top smooth button */
+        .back-to-top {
+            position: fixed;
+            bottom: 6.5rem;
+            right: 2rem;
+            width: 44px;
+            height: 44px;
+            background: rgba(20, 20, 20, 0.85);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            color: #d4af37;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            cursor: pointer;
+            z-index: 998;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(12px);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            text-decoration: none;
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .back-to-top:hover {
+            background: #d4af37;
+            color: #111111;
+            border-color: #d4af37;
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.35);
+        }
+        @media (max-width: 640px) {
+            .back-to-top {
+                bottom: 5.2rem;
+                right: 1.3rem;
+                width: 40px;
+                height: 40px;
+                font-size: 0.9rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- ==========================================
+         NAVBAR (Exact Poplawski Markup & Ônix Logo)
+         ========================================== -->
+    <nav class="nav" id="navbar">
+        <a href="#hero" class="nav-logo" title="Marmoraria Ônix">
+            <img src="assets/images/logo-onix-white.svg" alt="Marmoraria Ônix" class="nav-logo-white" decoding="async">
+            <img src="assets/images/logo-onix-dark.svg" alt="Marmoraria Ônix" class="nav-logo-dark" decoding="async">
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#properties">Projetos</a></li>
+            <li><a href="#process">O Percurso</a></li>
+            <li><a href="#especialidades">Especialidades</a></li>
+            <li><a href="#about">Quem Somos</a></li>
+            <li><a href="#cidades">Cidades</a></li>
+            <li><a href="#materiais">Catálogo de Rochas</a></li>
+            <li><a href="#contact" class="nav-cta">Solicitar Orçamento</a></li>
+            <li class="nav-mobile-social">
+                <a href="https://instagram.com/onix._marmoraria" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/5516997498543" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+            </li>
+        </ul>
+        <div class="nav-toggle" id="navToggle" aria-label="Menu Mobile">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <!-- ==========================================
+         HERO SECTION (Only ONE Button as Demanded)
+         ========================================== -->
+    <section class="hero" id="hero">
+        <div class="hero-slides">
+            <div class="hero-slide active">
+                <img src="assets/images/portfolio_hq/hero-bg.jpg" alt="Marmoraria Ônix - Fachada e Interiores de Alto Padrão" decoding="async">
+            </div>
+            <div class="hero-slide">
+                <img src="assets/images/portfolio_hq/hero-slide-2.jpg" alt="Marmoraria Ônix - Obras Residenciais Nobres" decoding="async">
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content reveal visible">
+            <div class="hero-label">MARMORARIA EM MATÃO & REGIÃO</div>
+            <h1 class="hero-heading">A Arte da Rocha <strong>Sob Medida</strong></h1>
+            <p class="hero-desc">
+                Mármores nobres, granitos selecionados e quartzitos exóticos com acabamento de alta precisão em corte 45° para projetos que exigem excelência.
+            </p>
+            <div class="hero-actions">
+                <a href="#contact" class="btn btn-primary">
+                    Solicitar Orçamento <i class="fas fa-arrow-right" style="font-size:0.65rem"></i>
+                </a>
+            </div>
+        </div>
+        <div class="hero-bottom">
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-number">+15</div>
+                    <div class="hero-stat-label">Anos de Tradição</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-number">+1.200</div>
+                    <div class="hero-stat-label">Obras Concluídas</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-number">100%</div>
+                    <div class="hero-stat-label">Corte em 45°</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-number">7</div>
+                    <div class="hero-stat-label">Cidades Atendidas</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 1: PROJETOS SELECIONADOS (NO HEADER BUTTON, PERFECT CONTRAST)
+         =================================================================== -->
+    <section class="properties" id="properties">
+        <div class="container">
+            <div class="properties-header reveal">
+                <div>
+                    <span class="section-label">Portfólio Exclusivo</span>
+                    <h2 class="section-title">Obras & Ambientes Executados</h2>
+                    <p class="section-subtitle">
+                        Bancadas esculpidas, ilhas gourmet, lareiras e projetos residenciais de alto padrão executados com corte milimétrico.
+                    </p>
+                </div>
+                <!-- Botão 'Solicitar Projeto' removido conforme solicitado -->
+            </div>
+
+            <!-- FILTRO DE PROJETOS COM ALTO CONTRASTE NA SEÇÃO BRANCA -->
+            <div class="project-filters-bar reveal">
+                <button class="project-filter-btn active" onclick="filterProjects('all', this)">Todos os Projetos</button>
+                <button class="project-filter-btn" onclick="filterProjects('cozinha', this)">Cozinhas & Ilhas</button>
+                <button class="project-filter-btn" onclick="filterProjects('banheiro', this)">Lavatórios Esculpidos</button>
+                <button class="project-filter-btn" onclick="filterProjects('gourmet', this)">Áreas Gourmet</button>
+            </div>
+
+            <!-- GRADE COM FOTOS REAIS DE ALTO PADRÃO DE MARMORARIA -->
+            <div class="properties-grid" id="projectsGrid">
+                <!-- Projeto 1: Cozinha Waterfall Calacatta (Featured) -->
+                <div class="property-card featured reveal" data-category="cozinha">
+                    <div class="property-image-wrap">
+                        <img src="assets/images/projects_luxury/cozinha-waterfall-calacatta.jpg" alt="Ilha Gourmet Waterfall em Quartzito Calacatta" class="property-image" loading="lazy" decoding="async">
+                        <div class="property-badges">
+                            <span class="property-badge">Ilha Cascata Waterfall</span>
+                        </div>
+                        <div class="property-info">
+                            <div class="property-location"><i class="fas fa-map-marker-alt"></i> Residencial Fechado • Araraquara</div>
+                            <h3 class="property-type">Cozinha Integrada com Ilha Cascata em Meia-Esquadria</h3>
+                            <div class="property-details">
+                                <span><i class="fas fa-check"></i> Corte 45°</span>
+                                <span><i class="fas fa-gem"></i> Quartzito Nobre</span>
+                                <span><i class="fas fa-shield-alt"></i> Impermeabilização</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 2: Granito Nobre Gourmet -->
+                <div class="property-card reveal" data-category="cozinha">
+                    <div class="property-image-wrap">
+                        <img src="assets/images/projects_luxury/bancada-preto-sao-gabriel.jpg" alt="Cozinha Gourmet em Granito com Ilha Integrada" class="property-image" loading="lazy" decoding="async">
+                        <div class="property-badges">
+                            <span class="property-badge">Granito Nobre</span>
+                        </div>
+                        <div class="property-info">
+                            <div class="property-location"><i class="fas fa-map-marker-alt"></i> Matão / SP</div>
+                            <h3 class="property-type">Bancada e Balcão em Granito com Ilha Integrada</h3>
+                            <div class="property-details">
+                                <span><i class="fas fa-cube"></i> Frontão Duplo</span>
+                                <span><i class="fas fa-layer-group"></i> Alta Dureza</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 3: Lavatório Cuba Esculpida -->
+                <div class="property-card reveal" data-category="banheiro">
+                    <div class="property-image-wrap">
+                        <img src="assets/images/projects_luxury/lavatorio-cuba-esculpida.jpg" alt="Lavatório Esculpido com Ralo Oculto" class="property-image" loading="lazy" decoding="async">
+                        <div class="property-badges">
+                            <span class="property-badge">Lavabo de Luxo</span>
+                        </div>
+                        <div class="property-info">
+                            <div class="property-location"><i class="fas fa-map-marker-alt"></i> Mansão • Ribeirão Preto</div>
+                            <h3 class="property-type">Cuba Esculpida em Mármore Nobre com Válvula Oculta</h3>
+                            <div class="property-details">
+                                <span><i class="fas fa-tint-slash"></i> Caimento Oculto</span>
+                                <span><i class="fas fa-feather"></i> Polimento Italiano</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 4: Área Gourmet Churrasqueira -->
+                <div class="property-card reveal" data-category="gourmet">
+                    <div class="property-image-wrap">
+                        <img src="assets/images/projects_luxury/area-gourmet-churrasqueira.jpg" alt="Varanda Gourmet e Bancada Churrasqueira" class="property-image" loading="lazy" decoding="async">
+                        <div class="property-badges">
+                            <span class="property-badge">Varanda Gourmet</span>
+                        </div>
+                        <div class="property-info">
+                            <div class="property-location"><i class="fas fa-map-marker-alt"></i> Condomínio • São Carlos</div>
+                            <h3 class="property-type">Bancada Completa para Churrasqueira e Espaço Chopp</h3>
+                            <div class="property-details">
+                                <span><i class="fas fa-utensils"></i> Cuba Inox Embutida</span>
+                                <span><i class="fas fa-fire"></i> Resistente ao Calor</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 5: Suíte Master Mármore Branco -->
+                <div class="property-card reveal" data-category="banheiro">
+                    <div class="property-image-wrap">
+                        <img src="assets/images/projects_luxury/suite-master-marmore-branco.jpg" alt="Bancada Dupla em Mármore Branco com Rodatampo" class="property-image" loading="lazy" decoding="async">
+                        <div class="property-badges">
+                            <span class="property-badge">Suíte Master</span>
+                        </div>
+                        <div class="property-info">
+                            <div class="property-location"><i class="fas fa-map-marker-alt"></i> Matão / SP</div>
+                            <h3 class="property-type">Bancada Dupla em Mármore Branco com Rodatampo</h3>
+                            <div class="property-details">
+                                <span><i class="fas fa-sparkles"></i> Veios Contínuos</span>
+                                <span><i class="fas fa-shield"></i> Resinado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 6: Living e Painel Lareira -->
+                <div class="property-card reveal" data-category="gourmet">
+                    <div class="property-image-wrap">
+                        <img src="assets/images/projects_luxury/painel-lareira-marmore.jpg" alt="Living com Acabamentos em Mármore Nobre" class="property-image" loading="lazy" decoding="async">
+                        <div class="property-badges">
+                            <span class="property-badge">Living & Lareira</span>
+                        </div>
+                        <div class="property-info">
+                            <div class="property-location"><i class="fas fa-map-marker-alt"></i> Sítio dos Ipês • Dobrada</div>
+                            <h3 class="property-type">Living Integrado com Revestimento em Mármore Nobre</h3>
+                            <div class="property-details">
+                                <span><i class="fas fa-border-all"></i> Grandes Formatos</span>
+                                <span><i class="fas fa-ruler-combined"></i> Juntas Discretas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- ========================================================
+         SECTION 2: O PERCURSO (DO ENTENDIMENTO À CONFERÊNCIA)
+         Exact 6 Cards Structure Demanded by User
+         ======================================================== -->
+    <section class="services" id="process">
+        <div class="container">
+            <div class="reveal" style="text-align:center;">
+                <span class="section-label">O Percurso</span>
+                <h2 class="section-title">Do entendimento à conferência</h2>
+                <p class="section-subtitle" style="max-width:680px; margin: 0 auto;">
+                    Um processo transparente, metódico e rigoroso para transformar a sua planta em uma peça de rocha impecavelmente instalada.
+                </p>
+            </div>
+
+            <!-- 6 CARDS EM GRID SEGUINDO O DESIGN SYSTEM POPLAWSKI -->
+            <div class="services-grid-process">
+                <!-- 01 -->
+                <div class="service-item reveal">
+                    <div class="service-number">01</div>
+                    <h3 class="service-title">Entendimento do projeto</h3>
+                    <p class="service-desc">
+                        Recebemos plantas, referências, medidas e fotos para compreender escopo, ambiente e momento da obra.
+                    </p>
+                </div>
+
+                <!-- 02 -->
+                <div class="service-item reveal">
+                    <div class="service-number">02</div>
+                    <h3 class="service-title">Orçamento e definição</h3>
+                    <p class="service-desc">
+                        A proposta registra materiais, acabamentos, condições, premissas e o que está incluído na execução.
+                    </p>
+                </div>
+
+                <!-- 03 -->
+                <div class="service-item reveal">
+                    <div class="service-number">03</div>
+                    <h3 class="service-title">Medição técnica</h3>
+                    <p class="service-desc">
+                        Conferimos o ambiente antes da produção e alinhamos interferências com cliente, arquiteto ou responsável pela obra.
+                    </p>
+                </div>
+
+                <!-- 04 -->
+                <div class="service-item reveal">
+                    <div class="service-number">04</div>
+                    <h3 class="service-title">Projeto executivo</h3>
+                    <p class="service-desc">
+                        Detalhamos medidas, recortes, encontros e soluções para aprovação antes do início da fabricação.
+                    </p>
+                </div>
+
+                <!-- 05 -->
+                <div class="service-item reveal">
+                    <div class="service-number">05</div>
+                    <h3 class="service-title">Produção</h3>
+                    <p class="service-desc">
+                        A fabricação segue o projeto aprovado, as características do material e a sequência combinada com a obra.
+                    </p>
+                </div>
+
+                <!-- 06 -->
+                <div class="service-item reveal">
+                    <div class="service-number">06</div>
+                    <h3 class="service-title">Instalação e conferência</h3>
+                    <p class="service-desc">
+                        Nossa equipe realiza a instalação e confere o resultado final, mantendo uma única responsabilidade do início ao fim.
+                    </p>
+                </div>
+            </div>
+
+            <!-- BLOCO "O QUE REUNIR" (EMBAIXO NA MESMA SEÇÃO, CONFORME SOLICITADO) -->
+            <div class="process-checklist-wrap reveal">
+                <div class="process-checklist-grid">
+                    <div>
+                        <span class="section-label">Para Começar a Conversa</span>
+                        <h3 class="section-title" style="font-size:2rem; margin-top:0.5rem; margin-bottom:1rem; color:#ffffff;">O que reunir</h3>
+                        <p style="color:rgba(255,255,255,0.7); font-size:0.92rem; line-height:1.8; font-weight:300;">
+                            Envie o que já estiver disponível. Esses itens ajudam a Marmoraria Ônix a compreender o ambiente, o escopo e a etapa da sua obra com máxima agilidade.
+                        </p>
+                        <div class="checklist-note">
+                            Esses elementos dão contexto ao entendimento inicial do escopo.
+                        </div>
+                    </div>
+
+                    <div class="checklist-items">
+                        <div class="checklist-item">
+                            <div class="checklist-icon"><i class="fas fa-check"></i></div>
+                            <span>Plantas ou desenhos disponíveis</span>
+                        </div>
+                        <div class="checklist-item">
+                            <div class="checklist-icon"><i class="fas fa-check"></i></div>
+                            <span>Referências do resultado desejado</span>
+                        </div>
+                        <div class="checklist-item">
+                            <div class="checklist-icon"><i class="fas fa-check"></i></div>
+                            <span>Medidas já disponíveis</span>
+                        </div>
+                        <div class="checklist-item">
+                            <div class="checklist-icon"><i class="fas fa-check"></i></div>
+                            <span>Fotos atuais do ambiente</span>
+                        </div>
+                        <div class="checklist-item">
+                            <div class="checklist-icon"><i class="fas fa-check"></i></div>
+                            <span>Escopo e ambiente a executar</span>
+                        </div>
+                        <div class="checklist-item">
+                            <div class="checklist-icon"><i class="fas fa-check"></i></div>
+                            <span>Momento atual da obra</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 3: SOLUÇÕES SOB MEDIDA (100% CONTRAST FIX)
+         ======================================================== -->
+    <section class="specialties-section" id="especialidades">
+        <div class="container">
+            <div class="reveal" style="text-align:center;">
+                <span class="section-label">Soluções Sob Medida</span>
+                <h2 class="section-title">Especialidades em Rochas Nobres</h2>
+                <p class="section-subtitle" style="max-width:680px; margin: 0 auto;">
+                    Da escolha cuidadosa da chapa bruta à instalação milimétrica, transformamos mármores e quartzitos em peças de destaque.
+                </p>
+            </div>
+
+            <div class="specialties-grid">
+                <!-- 01 Cozinhas & Ilhas Gourmet -->
+                <div class="specialty-card reveal">
+                    <div>
+                        <div class="specialty-icon"><i class="fas fa-utensils"></i></div>
+                        <h3 class="specialty-title">Cozinhas & Ilhas Gourmet</h3>
+                        <p class="specialty-desc">
+                            Bancadas integradas, frontões contínuos e cubas esculpidas com corte em meia-esquadria de 45° para encaixe sem emendas visíveis.
+                        </p>
+                    </div>
+                    <div style="margin-top:1.5rem; font-size:0.75rem; color:var(--gold); text-transform:uppercase; letter-spacing:0.1em; font-weight:500;">
+                        Alta Precisão • 45°
+                    </div>
+                </div>
+
+                <!-- 02 Banheiros & Lavatórios Esculpidos -->
+                <div class="specialty-card reveal">
+                    <div>
+                        <div class="specialty-icon"><i class="fas fa-bath"></i></div>
+                        <h3 class="specialty-title">Banheiros & Lavatórios Esculpidos</h3>
+                        <p class="specialty-desc">
+                            Cubas embutidas com ralo oculto e nichos sob medida em mármores e quartzitos nobres, criando peças contínuas e sofisticadas.
+                        </p>
+                    </div>
+                    <div style="margin-top:1.5rem; font-size:0.75rem; color:var(--gold); text-transform:uppercase; letter-spacing:0.1em; font-weight:500;">
+                        Ralo Oculto • Peça Única
+                    </div>
+                </div>
+
+                <!-- 03 Áreas Gourmet & Churrasqueiras -->
+                <div class="specialty-card reveal">
+                    <div>
+                        <div class="specialty-icon"><i class="fas fa-fire-burner"></i></div>
+                        <h3 class="specialty-title">Áreas Gourmet & Churrasqueiras</h3>
+                        <p class="specialty-desc">
+                            Bancadas de alta resistência térmica e mecânica, com corte perfeito para cooktop, chopeira e churrasqueiras suspensas.
+                        </p>
+                    </div>
+                    <div style="margin-top:1.5rem; font-size:0.75rem; color:var(--gold); text-transform:uppercase; letter-spacing:0.1em; font-weight:500;">
+                        Resistência Térmica
+                    </div>
+                </div>
+
+                <!-- 04 Escadas, Soleiras & Fachadas -->
+                <div class="specialty-card reveal">
+                    <div>
+                        <div class="specialty-icon"><i class="fas fa-stairs"></i></div>
+                        <h3 class="specialty-title">Escadas, Soleiras & Fachadas</h3>
+                        <p class="specialty-desc">
+                            Revestimentos imponentes em grandes formatos com paginação precisa de veios e juntas discretas para valorizar a arquitetura.
+                        </p>
+                    </div>
+                    <div style="margin-top:1.5rem; font-size:0.75rem; color:var(--gold); text-transform:uppercase; letter-spacing:0.1em; font-weight:500;">
+                        Grandes Formatos
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 4: SOBRE NÓS (TWO STACKED IMAGES & CONTRAST FIX)
+         ======================================================== -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <!-- Two Overlapping Images Matching Poplawski Layout -->
+                <div class="about-image-wrap reveal">
+                    <img src="assets/images/about/carlos-oficina.jpg" alt="Carlos Cesar Setin na Oficina Ônix" class="about-image" loading="lazy" decoding="async">
+                    <img src="assets/images/about/obra-destaque.jpg" alt="Acabamento de Alta Precisão em Rocha Nobre" class="about-image-stack" loading="lazy" decoding="async">
+                    <div class="about-image-accent"></div>
+                </div>
+
+                <div class="about-content reveal">
+                    <span class="section-label">Tradição & Maestria</span>
+                    <h2 class="section-title">Carlos Cesar Setin</h2>
+                    <p class="about-role" style="color:var(--gold); font-weight:600; font-family:'Sora',sans-serif; margin-bottom:1.5rem; letter-spacing:0.15em;">
+                        Fundador & Mestre em Marmoraria — Ônix Matão
+                    </p>
+                    
+                    <div class="about-quote">
+                        "Cada rocha tem sua história e cada ambiente exige uma precisão única. Não entregamos apenas mármore ou granito; entregamos a realização de um sonho esculpido em forma de acabamento."
+                    </div>
+
+                    <p class="about-text">
+                        Com mais de 15 anos de atuação dedicada ao setor de rochas ornamentais no interior paulista, a <strong>Marmoraria Ônix</strong> construiu sua sólida reputação baseada no rigor técnico, no cumprimento pontual de prazos e na busca constante pela perfeição em cada meia-esquadria.
+                    </p>
+                    <p class="about-text">
+                        Com sede própria em <strong>Matão</strong> e filial de apoio no <strong>Sítio dos Ipês em Dobrada</strong>, atendemos famílias exigentes, engenheiros e escritórios de arquitetura que exigem paginação fluída de veios, impermeabilização técnica de fábrica e montagem limpa e segura.
+                    </p>
+
+                    <!-- Métricas com alto contraste no fundo branco -->
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-num">+15</span>
+                            <span class="stat-label">Anos de História</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">+1.200</span>
+                            <span class="stat-label">Obras Concluídas</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">100%</span>
+                            <span class="stat-label">Corte em 45°</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">7</span>
+                            <span class="stat-label">Cidades Atendidas</span>
+                        </div>
+                    </div>
+
+                    <div style="margin-top:2.5rem; display:flex; align-items:center; gap:1.5rem; flex-wrap:wrap;">
+                        <a href="#contact" class="btn btn-primary">
+                            Falar com Carlos Cesar <i class="fas fa-arrow-right" style="font-size:0.65rem"></i>
+                        </a>
+                        <div class="about-signature" style="font-style:italic; font-size:1.4rem; color:var(--gold);">
+                            Carlos Cesar Setin
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 5: CIDADES ATENDIDAS (WATERFALL CASCATA NO MOBILE & COPY COMPLETA)
+         ======================================================== -->
+    <section class="regions" id="cidades">
+        <div class="regions-header reveal">
+            <div style="padding: 0 2rem;">
+                <span class="section-label">Cobertura Regional</span>
+                <h2 class="section-title">Cidades Atendidas</h2>
+                <p class="section-subtitle">
+                    Atendimento presencial com medição técnica in loco e transporte seguro para Matão, Dobrada e todo o circuito regional.
+                </p>
+            </div>
+        </div>
+
+        <div class="regions-track-wrap reveal">
+            <div class="regions-grid-luxury">
+                <!-- Matão -->
+                <div class="region-card-luxury">
+                    <img src="assets/images/cities/matao.jpg" alt="Matão - SP" loading="lazy" decoding="async">
+                    <div class="region-card-luxury-overlay"></div>
+                    <div class="region-card-luxury-content">
+                        <span class="region-card-sub">Sede & Fábrica Própria</span>
+                        <div class="region-card-city">Matão</div>
+                        <div class="region-card-scope">
+                            Bancadas, Ilhas Gourmet, Lavatórios Esculpidos, Condomínios e Mansões
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dobrada -->
+                <div class="region-card-luxury">
+                    <img src="assets/images/cities/dobrada.jpg" alt="Dobrada - SP" loading="lazy" decoding="async">
+                    <div class="region-card-luxury-overlay"></div>
+                    <div class="region-card-luxury-content">
+                        <span class="region-card-sub">Unidade Sítio dos Ipês</span>
+                        <div class="region-card-city">Dobrada</div>
+                        <div class="region-card-scope">
+                            Medição Técnica, Reformas, Casas, Meia-Esquadria 45° e Áreas Gourmet
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Araraquara -->
+                <div class="region-card-luxury">
+                    <img src="assets/images/cities/araraquara.jpg" alt="Araraquara e Região" loading="lazy" decoding="async">
+                    <div class="region-card-luxury-overlay"></div>
+                    <div class="region-card-luxury-content">
+                        <span class="region-card-sub">Atendimento Completo</span>
+                        <div class="region-card-city">Araraquara</div>
+                        <div class="region-card-scope">
+                            Condomínios Fechados, Mansões, Projetos Arquitetônicos e Ilhas Cascata
+                        </div>
+                    </div>
+                </div>
+
+                <!-- São Carlos -->
+                <div class="region-card-luxury">
+                    <img src="assets/images/cities/sao-carlos.jpg" alt="São Carlos e Região" loading="lazy" decoding="async">
+                    <div class="region-card-luxury-overlay"></div>
+                    <div class="region-card-luxury-content">
+                        <span class="region-card-sub">Atendimento Completo</span>
+                        <div class="region-card-city">São Carlos</div>
+                        <div class="region-card-scope">
+                            Obras de Alto Padrão, Cozinhas Integradas, Banheiros de Luxo e Varandas
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ribeirão Preto -->
+                <div class="region-card-luxury">
+                    <img src="assets/images/cities/ribeirao-preto.jpg" alt="Ribeirão Preto e Região" loading="lazy" decoding="async">
+                    <div class="region-card-luxury-overlay"></div>
+                    <div class="region-card-luxury-content">
+                        <span class="region-card-sub">Atendimento Completo</span>
+                        <div class="region-card-city">Ribeirão Preto</div>
+                        <div class="region-card-scope">
+                            Residenciais de Luxo, Obras Comerciais, Escadas Nobres e Fachadas
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Jaboticabal -->
+                <div class="region-card-luxury">
+                    <img src="assets/images/cities/jaboticabal.jpg" alt="Jaboticabal e Região" loading="lazy" decoding="async">
+                    <div class="region-card-luxury-overlay"></div>
+                    <div class="region-card-luxury-content">
+                        <span class="region-card-sub">Atendimento Completo</span>
+                        <div class="region-card-city">Jaboticabal</div>
+                        <div class="region-card-scope">
+                            Reformas, Casas, Lavatórios Esculpidos, Soleiras e Áreas de Lazer
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Taquaritinga -->
+                <div class="region-card-luxury">
+                    <img src="assets/images/cities/taquaritinga.jpg" alt="Taquaritinga e Região" loading="lazy" decoding="async">
+                    <div class="region-card-luxury-overlay"></div>
+                    <div class="region-card-luxury-content">
+                        <span class="region-card-sub">Atendimento Completo</span>
+                        <div class="region-card-city">Taquaritinga</div>
+                        <div class="region-card-scope">
+                            Acabamentos Especiais, Cortes 45°, Bancadas Gourmet e Revestimentos
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Demais Regiões -->
+                <div class="region-card-luxury" style="background:#151515; display:flex; align-items:center; justify-content:center; text-align:center; padding:2rem;">
+                    <div>
+                        <i class="fas fa-truck-fast" style="font-size:2.4rem; color:var(--gold); margin-bottom:1rem;"></i>
+                        <span class="region-card-sub">Circuito Regional</span>
+                        <div class="region-card-city" style="font-size:1.3rem;">Sua Cidade</div>
+                        <p style="color:rgba(255,255,255,0.7); font-size:0.78rem; margin:0.8rem 0 1.2rem; line-height:1.6;">
+                            Consulte rota e agenda para obras em qualquer município do interior de SP.
+                        </p>
+                        <a href="#contact" class="btn-outline" style="font-size:0.75rem; border-color:var(--gold); color:var(--gold);">Consultar Rota</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 6: CATÁLOGO DE PEDRAS (LAYOUT IDÊNTICO AO GRANOS DA IMAGEM 6)
+         White Gallery Aesthetic with Terracotta Subtitle and Sora Serif Headings
+         =================================================================== -->
+    <section class="materials-section-granos" id="materiais">
+        <div class="container">
+            <div class="reveal" style="text-align:center;">
+                <span class="section-label">Amostras & Rochas Nobres</span>
+                <h2 class="section-title">Portfólio de Nossos Produtos</h2>
+                <p class="section-subtitle" style="max-width:700px; margin: 0 auto;">
+                    Explore nossa curadoria de mármores, quartzitos exóticos e granitos nobres com fotos reais de chapas e acabamentos.
+                </p>
+            </div>
+
+            <!-- FILTROS MINIMALISTAS E DISCRETOS (Aesthetic Granos) -->
+            <div class="stone-filters-granos reveal">
+                <button class="stone-filter-granos-btn active" data-filter="all" onclick="filterStones('all', this)">Todas as Pedras</button>
+                <button class="stone-filter-granos-btn" data-filter="Clássicos" onclick="filterStones('Clássicos', this)">Clássicos</button>
+                <button class="stone-filter-granos-btn" data-filter="Lançamentos" onclick="filterStones('Lançamentos', this)">Lançamentos</button>
+                <button class="stone-filter-granos-btn" data-filter="Linha Perla" onclick="filterStones('Linha Perla', this)">Linha Perla</button>
+                <button class="stone-filter-granos-btn" data-filter="Exóticos" onclick="filterStones('Exóticos', this)">Exóticos</button>
+            </div>
+
+            <!-- GRID COM O LAYOUT EXATO DA IMAGEM 6 (FOTO + TAG TERRACOTTA + NOME) -->
+            <div class="stones-grid-granos" id="stonesGrid">
+                
+                <!-- 1. Alamo Navona -->
+                <div class="stone-granos-card reveal" data-category="Lançamentos">
+                    <div class="stone-granos-img-wrap">
+                        <img src="assets/images/materials/alamo-navona.jpg" alt="Alamo Navona" loading="lazy" decoding="async">
+                    </div>
+                    <span class="stone-granos-cat">LANÇAMENTOS</span>
+                    <h3 class="stone-granos-title">Alamo Navona</h3>
+                </div>
+
+                <!-- 2. Alpha Matte -->
+                <div class="stone-granos-card reveal" data-category="Linha Perla">
+                    <div class="stone-granos-img-wrap">
+                        <img src="assets/images/materials/alpha-matte.jpg" alt="Alpha Matte" loading="lazy" decoding="async">
+                    </div>
+                    <span class="stone-granos-cat">LINHA PERLA</span>
+                    <h3 class="stone-granos-title">Alpha Matte</h3>
+                </div>
+
+                <!-- 3. Azulli -->
+                <div class="stone-granos-card reveal" data-category="Exóticos">
+                    <div class="stone-granos-img-wrap">
+                        <img src="assets/images/materials/azulli.jpg" alt="Azulli Exótico" loading="lazy" decoding="async">
+                    </div>
+                    <span class="stone-granos-cat">EXÓTICOS</span>
+                    <h3 class="stone-granos-title">Azulli</h3>
+                </div>
+
+                <!-- 4. Bianco Antico -->
+                <div class="stone-granos-card reveal" data-category="Clássicos">
+                    <div class="stone-granos-img-wrap">
+                        <img src="assets/images/materials/bianco-antico.jpg" alt="Bianco Antico" loading="lazy" decoding="async">
+                    </div>
+                    <span class="stone-granos-cat">CLÁSSICOS</span>
+                    <h3 class="stone-granos-title">Bianco Antico</h3>
+                </div>
+
+                <!-- 5. Branco Alamo -->
+                <div class="stone-granos-card reveal" data-category="Clássicos">
+                    <div class="stone-granos-img-wrap">
+                        <img src="assets/images/materials/branco-alamo.jpg" alt="Branco Alamo" loading="lazy" decoding="async">
+                    </div>
+                    <span class="stone-granos-cat">CLÁSSICOS</span>
+                    <h3 class="stone-granos-title">Branco Alamo</h3>
+                </div>
+
+                <!-- 6. Branco Alpha -->
+                <div class="stone-granos-card reveal" data-category="Clássicos">
+                    <div class="stone-granos-img-wrap">
+                        <img src="assets/images/materials/branco-alpha.jpg" alt="Branco Alpha" loading="lazy" decoding="async">
+                    </div>
+                    <span class="stone-granos-cat">CLÁSSICOS</span>
+                    <h3 class="stone-granos-title">Branco Alpha</h3>
+                </div>
+
+                <!-- 7. Breccia Luna -->
+                <div class="stone-granos-card reveal" data-category="Lançamentos">
+                    <div class="stone-granos-img-wrap">
+                        <img src="assets/images/materials/breccia-luna.png" alt="Breccia Luna" loading="lazy" decoding="async">
+                    </div>
+                    <span class="stone-granos-cat">LANÇAMENTOS</span>
+                    <h3 class="stone-granos-title">Breccia Luna</h3>
+                </div>
+
+                <!-- 8. Crema Marfil -->
+                <div class="stone-granos-card reveal" data-category="Clássicos">
+                    <div class="stone-granos-img-wrap">
+                        <img src="assets/images/materials/crema-marfil.jpg" alt="Crema Marfil" loading="lazy" decoding="async">
+                    </div>
+                    <span class="stone-granos-cat">CLÁSSICOS</span>
+                    <h3 class="stone-granos-title">Crema Marfil</h3>
+                </div>
+
+                <!-- 9. Da Vinci -->
+                <div class="stone-granos-card reveal" data-category="Linha Perla">
+                    <div class="stone-granos-img-wrap">
+                        <img src="assets/images/materials/da-vinci.jpg" alt="Da Vinci" loading="lazy" decoding="async">
+                    </div>
+                    <span class="stone-granos-cat">LINHA PERLA</span>
+                    <h3 class="stone-granos-title">Da Vinci</h3>
+                </div>
+
+                <!-- 10. Fantastic Brown -->
+                <div class="stone-granos-card reveal" data-category="Linha Perla">
+                    <div class="stone-granos-img-wrap">
+                        <img src="assets/images/materials/fantastic-brown.jpg" alt="Fantastic Brown" loading="lazy" decoding="async">
+                    </div>
+                    <span class="stone-granos-cat">LINHA PERLA</span>
+                    <h3 class="stone-granos-title">Fantastic Brown</h3>
+                </div>
+
+                <!-- 11. Frassino -->
+                <div class="stone-granos-card reveal" data-category="Linha Perla">
+                    <div class="stone-granos-img-wrap">
+                        <img src="assets/images/materials/frassino.jpg" alt="Frassino" loading="lazy" decoding="async">
+                    </div>
+                    <span class="stone-granos-cat">LINHA PERLA</span>
+                    <h3 class="stone-granos-title">Frassino</h3>
+                </div>
+
+                <!-- 12. Green Ocean -->
+                <div class="stone-granos-card reveal" data-category="Lançamentos">
+                    <div class="stone-granos-img-wrap">
+                        <img src="assets/images/materials/green-ocean.jpg" alt="Green Ocean" loading="lazy" decoding="async">
+                    </div>
+                    <span class="stone-granos-cat">LANÇAMENTOS</span>
+                    <h3 class="stone-granos-title">Green Ocean</h3>
+                </div>
+
+                <!-- 13. Perla Santana -->
+                <div class="stone-granos-card reveal" data-category="Linha Perla">
+                    <div class="stone-granos-img-wrap">
+                        <img src="assets/images/materials/perla-santana.jpg" alt="Perla Santana" loading="lazy" decoding="async">
+                    </div>
+                    <span class="stone-granos-cat">LINHA PERLA</span>
+                    <h3 class="stone-granos-title">Perla Santana</h3>
+                </div>
+
+                <!-- 14. Verde Pantanal -->
+                <div class="stone-granos-card reveal" data-category="Linha Perla">
+                    <div class="stone-granos-img-wrap">
+                        <img src="assets/images/materials/verde-pantanal.jpg" alt="Verde Pantanal" loading="lazy" decoding="async">
+                    </div>
+                    <span class="stone-granos-cat">LINHA PERLA</span>
+                    <h3 class="stone-granos-title">Verde Pantanal</h3>
+                </div>
+
+                <!-- 15. Terracotta -->
+                <div class="stone-granos-card reveal" data-category="Lançamentos">
+                    <div class="stone-granos-img-wrap">
+                        <img src="assets/images/materials/terracotta.jpg" alt="Terracotta" loading="lazy" decoding="async">
+                    </div>
+                    <span class="stone-granos-cat">LANÇAMENTOS</span>
+                    <h3 class="stone-granos-title">Terracotta</h3>
+                </div>
+            </div>
+
+            <!-- Chamada para consultar chapa -->
+            <div class="reveal" style="text-align:center; margin-top:4rem; padding:2.5rem; background:#f7f6f2; border:1px solid rgba(0,0,0,0.06); border-radius:6px;">
+                <p style="color:#222222; font-size:1.05rem; margin-bottom:1.2rem; font-weight:400;">
+                    Procura por uma chapa específica, granito tradicional ou rocha sob encomenda?
+                </p>
+                <a href="#contact" class="btn btn-primary" style="background:var(--terracotta); border-color:var(--terracotta);">
+                    Consultar Disponibilidade de Chapas <i class="fas fa-arrow-right" style="font-size:0.65rem"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 7: CONTATO & FORMULÁRIO WHATSAPP
+         ========================================== -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="reveal">
+                <span class="section-label">Atendimento Exclusivo</span>
+                <h2 class="section-title">Solicite seu Orçamento</h2>
+                <p class="section-subtitle">
+                    Envie as informações da sua obra. Ao clicar em enviar, uma mensagem completa e formatada será aberta diretamente no WhatsApp de Carlos Cesar Setin.
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Informações e Endereços Oficiais -->
+                <div class="reveal">
+                    <!-- Endereço Matão -->
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <div class="contact-info-label">Unidade Matão / SP (Sede & Oficina)</div>
+                            <div class="contact-info-value">
+                                Av. Benício Pinto de Mendonça, 547 - Alto<br>Matão - SP, CEP 15997-082
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Endereço Dobrada -->
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-tree"></i></div>
+                        <div>
+                            <div class="contact-info-label">Unidade Dobrada / SP</div>
+                            <div class="contact-info-value">
+                                Sítio dos Ipês — Dobrada - SP
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- WhatsApp -->
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fab fa-whatsapp"></i></div>
+                        <div>
+                            <div class="contact-info-label">WhatsApp Oficial</div>
+                            <div class="contact-info-value">
+                                <a href="https://wa.me/5516997498543" target="_blank">(16) 99749-8543</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Telefone Fixo -->
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <div class="contact-info-label">Telefone Fixo</div>
+                            <div class="contact-info-value">(16) 3394-2089</div>
+                        </div>
+                    </div>
+
+                    <!-- E-mail -->
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <div class="contact-info-label">E-mail</div>
+                            <div class="contact-info-value">
+                                <a href="mailto:carloscesarsetin@hotmail.com">carloscesarsetin@hotmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Instagram -->
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fab fa-instagram"></i></div>
+                        <div>
+                            <div class="contact-info-label">Instagram Oficial</div>
+                            <div class="contact-info-value">
+                                <a href="https://instagram.com/onix._marmoraria" target="_blank">@onix._marmoraria</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulário com Classes Nativas do Poplawski Design System -->
+                <form class="contact-form reveal" onsubmit="handleQuoteSubmit(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Nome Completo *</label>
+                            <input type="text" id="formName" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label>WhatsApp / Telefone *</label>
+                            <input type="tel" id="formPhone" placeholder="(16) 99999-9999" data-phone-mask required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Cidade da Obra *</label>
+                            <select id="formCity">
+                                <option value="Matão">Matão / SP</option>
+                                <option value="Dobrada">Dobrada / SP</option>
+                                <option value="Araraquara">Araraquara / SP</option>
+                                <option value="São Carlos">São Carlos / SP</option>
+                                <option value="Ribeirão Preto">Ribeirão Preto / SP</option>
+                                <option value="Jaboticabal">Jaboticabal / SP</option>
+                                <option value="Taquaritinga">Taquaritinga / SP</option>
+                                <option value="Outra Cidade">Outra Cidade / Região</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Ambiente Principal</label>
+                            <select id="formScope">
+                                <option value="Cozinha e Ilha Gourmet">Cozinha e Ilha Gourmet</option>
+                                <option value="Lavatório Esculpido / Banheiro">Lavatório Esculpido / Banheiro</option>
+                                <option value="Área Gourmet e Churrasqueira">Área Gourmet e Churrasqueira</option>
+                                <option value="Escada, Soleiras e Rodapés">Escada, Soleiras e Rodapés</option>
+                                <option value="Obra Completa / Vários Ambientes">Obra Completa / Vários Ambientes</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Pedra / Material de Interesse (se houver)</label>
+                        <input type="text" id="formStone" placeholder="Ex.: Alamo Navona, Preto São Gabriel, Mármore Paraná, Quartzito">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Mensagem / Medidas Disponíveis</label>
+                        <textarea id="formMessage" placeholder="Conte-nos sobre o que você busca, planta, medidas ou detalhes da sua obra..."></textarea>
+                    </div>
+
+                    <button type="submit" class="form-submit" style="background:#25d366; border-color:#25d366; color:#ffffff; font-weight:600; font-size:1rem; padding:1.1rem; display:flex; align-items:center; justify-content:center; gap:0.6rem;">
+                        <i class="fab fa-whatsapp" style="font-size:1.3rem;"></i> Enviar via WhatsApp
+                    </button>
+                    <p style="font-size:0.75rem; color:#888888; text-align:center; margin-top:0.4rem;">
+                        Ao clicar, você será redirecionado para o WhatsApp com todos os dados preenchidos.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FOOTER (Exact Poplawski Markup & Style)
+         ========================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div>
+                    <div class="footer-logo">
+                        <img src="assets/images/logo-onix-white.svg" alt="Marmoraria Ônix" style="height:32px; filter:none;" decoding="async">
+                    </div>
+                    <p class="footer-desc">
+                        Revestindo e decorando com mármores, granitos e quartzitos de alta precisão. Tradição, maestria artesanal e excelência em cada corte.
+                    </p>
+                    <a href="mailto:carloscesarsetin@hotmail.com" class="footer-email">
+                        <i class="fas fa-envelope"></i> carloscesarsetin@hotmail.com
+                    </a>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/onix._marmoraria" target="_blank" rel="noopener" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/5516997498543" target="_blank" rel="noopener" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="tel:1633942089" title="Telefone Fixo">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="footer-heading">Navegação</div>
+                    <ul class="footer-links">
+                        <li><a href="#properties">Projetos Selecionados</a></li>
+                        <li><a href="#process">O Percurso</a></li>
+                        <li><a href="#especialidades">Especialidades</a></li>
+                        <li><a href="#about">Carlos Cesar Setin</a></li>
+                        <li><a href="#cidades">Cidades Atendidas</a></li>
+                        <li><a href="#materiais">Catálogo de Rochas</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="footer-heading">Unidades Ônix</div>
+                    <ul class="footer-links">
+                        <li><span style="color:#ffffffbf;">Matão/SP:</span> Av. Benício Pinto de Mendonça, 547</li>
+                        <li><span style="color:#ffffffbf;">Dobrada/SP:</span> Sítio dos Ipês</li>
+                        <li><span style="color:#ffffffbf;">Atendimento:</span> Matão, Dobrada, Araraquara, São Carlos, Ribeirão Preto e região</li>
+                        <li><span style="color:#ffffffbf;">Horário:</span> Seg a Sex: 07h30 às 17h30</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    © 2026 Marmoraria Ônix — Carlos Cesar Setin. Todos os direitos reservados.
+                </div>
+                <div class="footer-dev">
+                    <span>Design System Oficial de Alto Padrão</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+        <!-- Back to Top Smooth Button -->
+    <a href="#hero" id="backToTop" class="back-to-top" title="Voltar ao topo" aria-label="Voltar ao topo"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
+    <a href="https://wa.me/5516997498543?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20Marmoraria%20%C3%94nix" target="_blank" class="floating-whatsapp" title="Falar no WhatsApp" aria-label="Falar no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Poplawski Native Javascript -->
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/home.js"></script>
+
+    <!-- Custom Handlers for Filters & WhatsApp Form -->
+    <script>
+        // Projects Filter
+        function filterProjects(cat, btn) {
+            const buttons = btn.parentElement.querySelectorAll('.project-filter-btn');
+            buttons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const cards = document.querySelectorAll('#projectsGrid .property-card');
+            cards.forEach(c => {
+                if (cat === 'all' || c.getAttribute('data-category') === cat) {
+                    c.style.display = 'block';
+                } else {
+                    c.style.display = 'none';
+                }
+            });
+        }
+
+        // Stones / Materials Minimalist Filter (Granos Style)
+        function filterStones(category, btn) {
+            const buttons = btn.parentElement.querySelectorAll('.stone-filter-granos-btn');
+            buttons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const cards = document.querySelectorAll('#stonesGrid .stone-granos-card');
+            cards.forEach(card => {
+                const cardCat = card.getAttribute('data-category');
+                if (category === 'all' || cardCat === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Form Submit to WhatsApp - Formatted perfectly for Carlos
+        function handleQuoteSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('formName').value.trim();
+            const phone = document.getElementById('formPhone').value.trim();
+            const city = document.getElementById('formCity').value;
+            const scope = document.getElementById('formScope').value;
+            const stone = document.getElementById('formStone').value.trim() || 'A definir / Consultar recomendações';
+            const message = document.getElementById('formMessage').value.trim();
+
+            let text = `*SOLICITAÇÃO DE ORÇAMENTO — MARMORARIA ÔNIX*%0A`;
+            text += `---------------------------------------------%0A`;
+            text += `👤 *Nome:* ${encodeURIComponent(name)}%0A`;
+            text += `📱 *WhatsApp/Tel:* ${encodeURIComponent(phone)}%0A`;
+            text += `📍 *Cidade da Obra:* ${encodeURIComponent(city)}%0A`;
+            text += `🏠 *Ambiente Principal:* ${encodeURIComponent(scope)}%0A`;
+            text += `💎 *Pedra de Interesse:* ${encodeURIComponent(stone)}%0A`;
+            if (message) {
+                text += `📝 *Detalhes/Medidas:* ${encodeURIComponent(message)}%0A`;
+            }
+            text += `---------------------------------------------%0A`;
+            text += `_Mensagem enviada através do site oficial da Marmoraria Ônix._`;
+
+            const waUrl = `https://wa.me/5516997498543?text=${text}`;
+            window.open(waUrl, '_blank');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 268" width="100%" height="100%">
+<defs>
+    <linearGradient id="chromeGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#ffffff"/>
+        <stop offset="47%" stop-color="#f8fafc"/>
+        <stop offset="49%" stop-color="#94a3b8"/>
+        <stop offset="52%" stop-color="#cbd5e1"/>
+        <stop offset="85%" stop-color="#94a3b8"/>
+        <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <filter id="shadowFilter" x="-15%" y="-15%" width="130%" height="130%">
+        <feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+</defs>
+
+<g fill="#FFFFFF" fill-rule="evenodd">
+  <path d="M 89, 44 C 131.2, 44 165.5, 71.5 165.5, 105.5 C 165.5, 139.5 131.2, 167 89, 167 C 46.8, 167 12.5, 139.5 12.5, 105.5 C 12.5, 71.5 46.8, 44 89, 44 Z M 88.5, 66.5 C 64.2, 66.5 44.5, 84.4 44.5, 106.5 C 44.5, 128.6 64.2, 146.5 88.5, 146.5 C 112.8, 146.5 132.5, 128.6 132.5, 106.5 C 132.5, 84.4 112.8, 66.5 88.5, 66.5 Z"/>
+  <path d="M 172, 52 L 203, 52 L 266, 126 L 266, 54 L 297, 54 L 297, 166 L 266, 166 L 203, 92 L 203, 164 L 172, 164 Z"/>
+  <path d="M 307, 54 L 339, 54 L 339, 166 L 307, 166 Z"/>
+  <path d="M 503, 35 L 468, 35 L 418, 93 L 388, 57 L 355, 57 L 394, 102 L 314, 201 L 352, 201 L 418, 121 L 452, 169 L 486, 169 L 437, 108 Z"/>
+</g>
+
+<line x1="120" y1="228" x2="420" y2="228" stroke="#FFFFFF" stroke-width="0.8" opacity="0.65"/>
+<text x="270" y="254" text-anchor="middle" font-family="'Plus Jakarta Sans', 'Segoe UI', -apple-system, sans-serif" font-weight="200" font-size="20" letter-spacing="0.48em" fill="#FFFFFF">MARMORARIA</text>
+</svg>

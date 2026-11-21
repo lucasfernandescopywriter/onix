@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 225" width="100%" height="100%">
+<defs>
+
+        <linearGradient id="chromeGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#ffffff"/>
+            <stop offset="47%" stop-color="#f8fafc"/>
+            <stop offset="49%" stop-color="#94a3b8"/>
+            <stop offset="52%" stop-color="#cbd5e1"/>
+            <stop offset="85%" stop-color="#94a3b8"/>
+            <stop offset="100%" stop-color="#e2e8f0"/>
+        </linearGradient>
+        <linearGradient id="goldGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#fef08a"/>
+            <stop offset="48%" stop-color="#facc15"/>
+            <stop offset="50%" stop-color="#ca8a04"/>
+            <stop offset="85%" stop-color="#a16207"/>
+            <stop offset="100%" stop-color="#eab308"/>
+        </linearGradient>
+        <linearGradient id="darkGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#1e293b"/>
+            <stop offset="50%" stop-color="#0f172a"/>
+            <stop offset="100%" stop-color="#020617"/>
+        </linearGradient>
+        <filter id="shadowFilter" x="-15%" y="-15%" width="130%" height="130%">
+            <feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#000000" flood-opacity="0.6"/>
+        </filter>
+    
+</defs>
+<g fill="none" stroke="#000000" stroke-width="22" stroke-linejoin="round" stroke-linecap="round" >
+  <path d="M 89, 44 C 131.2, 44 165.5, 71.5 165.5, 105.5 C 165.5, 139.5 131.2, 167 89, 167 C 46.8, 167 12.5, 139.5 12.5, 105.5 C 12.5, 71.5 46.8, 44 89, 44 Z M 88.5, 66.5 C 64.2, 66.5 44.5, 84.4 44.5, 106.5 C 44.5, 128.6 64.2, 146.5 88.5, 146.5 C 112.8, 146.5 132.5, 128.6 132.5, 106.5 C 132.5, 84.4 112.8, 66.5 88.5, 66.5 Z" fill-rule="evenodd"/>
+  <path d="M 172, 52 L 203, 52 L 266, 126 L 266, 54 L 297, 54 L 297, 166 L 266, 166 L 203, 92 L 203, 164 L 172, 164 Z" fill-rule="evenodd"/>
+  <path d="M 307, 54 L 339, 54 L 339, 166 L 307, 166 Z" fill-rule="evenodd"/>
+  <path d="M 503, 35 L 468, 35 L 418, 93 L 388, 57 L 355, 57 L 394, 102 L 314, 201 L 352, 201 L 418, 121 L 452, 169 L 486, 169 L 437, 108 Z" fill-rule="evenodd"/>
+</g>
+<g fill="url(#goldGrad)" fill-rule="evenodd">
+  <path d="M 89, 44 C 131.2, 44 165.5, 71.5 165.5, 105.5 C 165.5, 139.5 131.2, 167 89, 167 C 46.8, 167 12.5, 139.5 12.5, 105.5 C 12.5, 71.5 46.8, 44 89, 44 Z M 88.5, 66.5 C 64.2, 66.5 44.5, 84.4 44.5, 106.5 C 44.5, 128.6 64.2, 146.5 88.5, 146.5 C 112.8, 146.5 132.5, 128.6 132.5, 106.5 C 132.5, 84.4 112.8, 66.5 88.5, 66.5 Z"/>
+  <path d="M 172, 52 L 203, 52 L 266, 126 L 266, 54 L 297, 54 L 297, 166 L 266, 166 L 203, 92 L 203, 164 L 172, 164 Z"/>
+  <path d="M 307, 54 L 339, 54 L 339, 166 L 307, 166 Z"/>
+  <path d="M 503, 35 L 468, 35 L 418, 93 L 388, 57 L 355, 57 L 394, 102 L 314, 201 L 352, 201 L 418, 121 L 452, 169 L 486, 169 L 437, 108 Z"/>
+</g>
+</svg>

@@ -1,0 +1,40 @@
+# Arquivos de script locais e dados intermediários
+*.py
+*.json
+*.pdf
+test_images/
+
+# Capturas de tela, renders e recortes de teste na raiz
+screenshot_*.png
+screenshot_*.jpg
+slice_*.jpg
+crop*.jpg
+crop2_*.jpg
+mockup_*.png
+audit_*.png
+preview_*.jpg
+identidade_visual_*.png
+instagram_*.png
+*.tmp
+*.log
+*.txt
+
+# Arquivos de rascunho e templates brutos locais
+extracted_*.html
+granos_*.html
+gen2_*.css
+index1_*.css
+index2.html
+brandboard_*.html
+identidade_visual_*.html
+instagram_*.html
+poplawski_*.html
+dossie_*
+proposta-comercial-*
+base de conhecimento/
+
+# Sistema Operacional e IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
