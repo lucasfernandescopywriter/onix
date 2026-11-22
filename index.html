@@ -63,15 +63,12 @@
         .hero {
             height: 100vh;
             min-height: 700px;
-            max-height: 940px;
+            min-height: 650px;
             position: relative;
             overflow: hidden;
             background: #000;
         }
-        .hero-label, .hero-heading, .hero-desc, .hero-actions, .reveal {
-            opacity: 1 !important;
-            transform: none !important;
-        }
+        /* Native Poplawski animations enabled */
 
         /* Navbar Logo Toggle Specificity */
         .nav-logo img {
@@ -999,6 +996,939 @@
             }
         }
 
+    
+        /* ========================================================
+           SEÇÃO DEPOIMENTOS GOOGLE REVIEWS (PROVA SOCIAL)
+           ======================================================== */
+        .testimonials-section {
+            background: #ffffff;
+            padding: 7rem 0;
+            border-bottom: 1px solid #ebe5dc;
+        }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3.5rem;
+        }
+        .testimonial-card {
+            background: #ffffff;
+            border: 1px solid #e8e3da;
+            border-radius: 12px;
+            padding: 2.2rem 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+        }
+        .testimonial-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .testimonial-profile {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .testimonial-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid #e0dbd1;
+            flex-shrink: 0;
+        }
+        .testimonial-meta {
+            display: flex;
+            flex-direction: column;
+        }
+        .testimonial-name {
+            font-family: 'Sora', sans-serif;
+            font-size: 0.98rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin: 0 0 0.2rem 0;
+            line-height: 1.25;
+        }
+        .testimonial-subtitle {
+            font-size: 0.78rem;
+            color: #737373;
+            margin: 0 0 0.35rem 0;
+            line-height: 1.3;
+        }
+        .testimonial-rating {
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+            font-family: 'Sora', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+        .rating-stars {
+            color: #FBBC04;
+            font-size: 0.95rem;
+            letter-spacing: 0.1em;
+        }
+        .testimonial-google {
+            flex-shrink: 0;
+            padding-top: 0.2rem;
+        }
+        .testimonial-body {
+            margin-top: 0.5rem;
+        }
+        .testimonial-quote {
+            font-size: 0.92rem;
+            line-height: 1.65;
+            color: #333333;
+            margin: 0;
+        }
+
+        /* ========================================================
+           SEÇÃO FAQ NINJA (ACORDEÃO INTERATIVO)
+           ======================================================== */
+        .faq-section {
+            background: #faf8f5;
+            padding: 7rem 0;
+            border-bottom: 1px solid #ebe5dc;
+        }
+        .faq-grid {
+            margin-top: 3.5rem;
+            max-width: 860px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+        .faq-item {
+            background: #ffffff;
+            border: 1px solid #e5dfd6;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .faq-item.active {
+            border-color: var(--gold, #b8860b);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+        }
+        .faq-question {
+            padding: 1.4rem 1.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            user-select: none;
+            gap: 1.5rem;
+        }
+        .faq-question h3 {
+            font-family: 'Sora', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin: 0;
+            line-height: 1.4;
+        }
+        .faq-icon {
+            font-size: 0.9rem;
+            color: var(--gold, #b8860b);
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease, padding 0.35s ease;
+            padding: 0 1.8rem;
+            color: #555555;
+            font-size: 0.93rem;
+            line-height: 1.7;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding: 0 1.8rem 1.5rem 1.8rem;
+        }
+
+        /* RESPONSIVIDADE ADICIONAL PARA DEPOIMENTOS E FOOTER */
+        @media (max-width: 992px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+        @media (max-width: 768px) {
+            .footer-top {
+                grid-template-columns: 1fr !important;
+                gap: 2.5rem !important;
+            }
+        }
+        /* GARANTIR QUE INFORMAÇÕES DE CONTATO NÃO SEJAM EM NEGRITO */
+        .contact-info-value {
+            font-weight: 300 !important;
+        }
+
+    
+        /* ========================================================
+           SEÇÃO MINIMALISTA: PARA COMEÇAR A CONVERSA (PRÉ-FORMULÁRIO)
+           ======================================================== */
+        .prep-section {
+            background: #fbf9f6;
+            padding: 5.5rem 0 3.5rem 0;
+            border-top: 1px solid #ebe5dc;
+        }
+        .prep-card {
+            background: #ffffff;
+            border: 1px solid #e8e2d8;
+            border-radius: 12px;
+            padding: 3.5rem 3rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+        }
+        .prep-header {
+            text-align: center;
+            max-width: 780px;
+            margin: 0 auto 3rem auto;
+        }
+        .prep-header .section-title {
+            font-size: clamp(1.8rem, 3.5vw, 2.3rem);
+            margin: 0.5rem 0 1rem 0;
+            color: #1a1a1a;
+        }
+        .prep-intro {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.98rem;
+            line-height: 1.7;
+            color: #555555;
+            font-weight: 300;
+        }
+        .prep-intro strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+        .prep-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.8rem;
+            margin-bottom: 2.8rem;
+        }
+        .prep-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            background: #faf8f5;
+            border: 1px solid #ebe5dc;
+            border-radius: 8px;
+            padding: 1.25rem 1.2rem;
+            transition: all 0.3s ease;
+        }
+        .prep-item:hover {
+            background: #ffffff;
+            border-color: var(--gold, #b8860b);
+            box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+        }
+        .prep-check {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: rgba(184, 134, 11, 0.12);
+            color: var(--gold, #b8860b);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            flex-shrink: 0;
+            margin-top: 0.15rem;
+        }
+        .prep-item-content h4 {
+            font-family: 'Sora', sans-serif;
+            font-size: 0.92rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin: 0 0 0.3rem 0;
+        }
+        .prep-item-content p {
+            font-size: 0.82rem;
+            line-height: 1.45;
+            color: #666666;
+            margin: 0;
+        }
+        .prep-notice {
+            background: #fdfbf7;
+            border: 1px solid rgba(184, 134, 11, 0.35);
+            border-radius: 8px;
+            padding: 1.4rem 1.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .prep-notice-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: #25d366;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+        .prep-notice-text {
+            flex: 1;
+            min-width: 260px;
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+        }
+        .prep-notice-text strong {
+            font-family: 'Sora', sans-serif;
+            font-size: 0.95rem;
+            color: #1a1a1a;
+        }
+        .prep-notice-text span {
+            font-size: 0.85rem;
+            color: #555555;
+            line-height: 1.4;
+        }
+        .prep-notice-btn {
+            background: var(--charcoal, #121212);
+            color: #ffffff;
+            padding: 0.75rem 1.4rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-family: 'Sora', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+        .prep-notice-btn:hover {
+            background: var(--gold, #b8860b);
+            color: #ffffff;
+        }
+
+        /* ========================================================
+           FILTRO PORTFÓLIO DE ROCHAS (NUNCA CORTA, ORGANIZADO)
+           ======================================================== */
+        .stone-filters-granos {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            flex-wrap: wrap !important;
+            gap: 0.75rem 0.9rem !important;
+            margin: 2.2rem auto 3.2rem auto !important;
+            padding: 0 1rem !important;
+            max-width: 960px !important;
+            overflow: visible !important;
+        }
+        .stone-filter-granos-btn {
+            background: #ffffff !important;
+            border: 1px solid rgba(0, 0, 0, 0.16) !important;
+            color: #333333 !important;
+            font-family: 'Outfit', sans-serif !important;
+            font-size: 0.82rem !important;
+            letter-spacing: 0.08em !important;
+            text-transform: uppercase !important;
+            padding: 0.6rem 1.4rem !important;
+            border-radius: 30px !important;
+            cursor: pointer !important;
+            transition: all 0.25s ease !important;
+            font-weight: 500 !important;
+            white-space: nowrap !important;
+            flex-shrink: 0 !important;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03) !important;
+        }
+        .stone-filter-granos-btn:hover {
+            color: #000000 !important;
+            border-color: var(--terracotta) !important;
+            background: rgba(178, 89, 56, 0.06) !important;
+        }
+        .stone-filter-granos-btn.active {
+            color: #ffffff !important;
+            background: var(--terracotta) !important;
+            font-weight: 600 !important;
+            border-color: var(--terracotta) !important;
+            box-shadow: 0 4px 14px rgba(178, 89, 56, 0.28) !important;
+        }
+
+        /* ========================================================
+           RESPONSIVIDADE: MOBILE IMAGENS CARLOS E FILTROS
+           ======================================================== */
+        @media (max-width: 992px) {
+            .prep-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .prep-card {
+                padding: 2.5rem 1.5rem;
+            }
+            .prep-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            .prep-notice {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1.4rem;
+            }
+            .prep-notice-btn {
+                width: 100%;
+                justify-content: center;
+                margin-top: 0.5rem;
+            }
+
+            /* LAYOUT DAS DUAS IMAGENS DO CARLOS CESAR NO MOBILE IGUAL AO DESKTOP */
+            .about-image-wrap {
+                position: relative !important;
+                margin: 1.5rem 1.5rem 3.5rem 0.5rem !important;
+                max-width: 86% !important;
+            }
+            .about-image {
+                width: 100% !important;
+                aspect-ratio: 4/5 !important;
+                object-fit: cover !important;
+                border-radius: 4px !important;
+                display: block !important;
+            }
+            .about-image-stack {
+                position: absolute !important;
+                bottom: -2rem !important;
+                right: -1.2rem !important;
+                width: 62% !important;
+                aspect-ratio: 16/10 !important;
+                object-fit: cover !important;
+                border: 6px solid #ffffff !important;
+                border-radius: 4px !important;
+                box-shadow: 0 16px 36px rgba(0, 0, 0, 0.22) !important;
+                z-index: 2 !important;
+                margin-top: 0 !important;
+            }
+            .about-image-accent {
+                display: block !important;
+                position: absolute !important;
+                top: -1rem !important;
+                left: -1rem !important;
+                width: 45% !important;
+                height: 45% !important;
+                border: 2px solid var(--gold) !important;
+                z-index: -1 !important;
+                border-radius: 4px !important;
+            }
+
+            /* FILTRO DE ROCHAS NO MOBILE: WRAP CENTRALIZADO E NUNCA CORTADO */
+            .stone-filters-granos {
+                display: flex !important;
+                flex-wrap: wrap !important;
+                justify-content: center !important;
+                gap: 0.5rem 0.6rem !important;
+                padding: 0 0.5rem !important;
+                margin: 1.5rem auto 2.5rem !important;
+                overflow-x: visible !important;
+            }
+            .stone-filter-granos-btn {
+                font-size: 0.72rem !important;
+                padding: 0.45rem 1rem !important;
+                white-space: nowrap !important;
+            }
+        }
+
+    
+        /* ========================================================
+           NAVBAR TRANSPARENTE FIXA COM ALTERNÂNCIA DE COR NO SCROLL
+           ======================================================== */
+        nav#navbar.nav {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            width: 100% !important;
+            z-index: 9999 !important;
+            background: transparent !important;
+            transition: background 0.35s ease, padding 0.35s ease, box-shadow 0.35s ease !important;
+            padding: 1.5rem 4% !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+        }
+        nav#navbar.nav.scrolled {
+            background: rgba(245, 241, 236, 0.97) !important;
+            -webkit-backdrop-filter: blur(20px) !important;
+            backdrop-filter: blur(20px) !important;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08) !important;
+            padding: 0.85rem 4% !important;
+        }
+        nav#navbar.nav .nav-logo-white {
+            display: block !important;
+            height: 38px !important;
+            width: auto !important;
+        }
+        nav#navbar.nav .nav-logo-dark {
+            display: none !important;
+            height: 38px !important;
+            width: auto !important;
+        }
+        nav#navbar.nav.scrolled .nav-logo-white {
+            display: none !important;
+        }
+        nav#navbar.nav.scrolled .nav-logo-dark {
+            display: block !important;
+        }
+        nav#navbar.nav .nav-links a {
+            color: rgba(255, 255, 255, 0.88) !important;
+            transition: color 0.25s ease !important;
+        }
+        nav#navbar.nav.scrolled .nav-links a {
+            color: #1a1a1a !important;
+        }
+        nav#navbar.nav.scrolled .nav-links a:hover {
+            color: var(--gold) !important;
+        }
+        nav#navbar.nav .nav-cta {
+            border: 1px solid rgba(255, 255, 255, 0.4) !important;
+            color: #ffffff !important;
+        }
+        nav#navbar.nav.scrolled .nav-cta {
+            border-color: #1a1a1a !important;
+            color: #1a1a1a !important;
+        }
+        nav#navbar.nav.scrolled .nav-cta:hover {
+            background: #1a1a1a !important;
+            color: #ffffff !important;
+        }
+        nav#navbar.nav .nav-toggle span {
+            background: #ffffff !important;
+        }
+        nav#navbar.nav.scrolled .nav-toggle span {
+            background: #1a1a1a !important;
+        }
+
+        /* Mobile dropdown */
+        @media (max-width: 992px) {
+            nav#navbar.nav .nav-links {
+                display: none !important;
+            }
+            nav#navbar.nav .nav-links.active {
+                display: flex !important;
+                flex-direction: column !important;
+                position: absolute !important;
+                top: 100% !important;
+                left: 0 !important;
+                right: 0 !important;
+                background: #141414 !important;
+                padding: 2rem !important;
+                gap: 1.5rem !important;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
+            }
+            nav#navbar.nav.scrolled .nav-links.active {
+                background: #f5f1ec !important;
+            }
+            nav#navbar.nav .nav-toggle {
+                display: flex !important;
+            }
+        }
+
+        /* ========================================================
+           HERO STATS HORIZONTAIS COM DIVISÓRIAS ELEGANTES
+           ======================================================== */
+        .hero-bottom {
+            position: absolute !important;
+            bottom: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            z-index: 4 !important;
+            background: rgba(0, 0, 0, 0.45) !important;
+            -webkit-backdrop-filter: blur(15px) !important;
+            backdrop-filter: blur(15px) !important;
+            border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+        }
+        .hero-stats {
+            display: flex !important;
+            flex-direction: row !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            max-width: 1300px !important;
+            margin: 0 auto !important;
+            padding: 0 1.5rem !important;
+            width: 100% !important;
+        }
+        .hero-stat {
+            flex: 1 !important;
+            text-align: center !important;
+            padding: 1.25rem 0.75rem !important;
+            border-right: 1px solid rgba(255, 255, 255, 0.12) !important;
+            border-bottom: none !important;
+        }
+        .hero-stat:last-child {
+            border-right: none !important;
+        }
+        .hero-stat-number {
+            font-size: 1.4rem !important;
+            font-weight: 300 !important;
+            color: #ffffff !important;
+            line-height: 1.1 !important;
+        }
+        .hero-stat-label {
+            font-size: 0.58rem !important;
+            letter-spacing: 0.15em !important;
+            text-transform: uppercase !important;
+            color: rgba(255, 255, 255, 0.7) !important;
+            margin-top: 0.35rem !important;
+            font-family: 'Sora', sans-serif !important;
+        }
+        @media (max-width: 640px) {
+            .hero-stats {
+                padding: 0 0.5rem !important;
+            }
+            .hero-stat {
+                padding: 0.85rem 0.25rem !important;
+            }
+            .hero-stat-number {
+                font-size: 1.05rem !important;
+            }
+            .hero-stat-label {
+                font-size: 0.42rem !important;
+                letter-spacing: 0.08em !important;
+            }
+        }
+
+        /* ========================================================
+           FAQ NINJA MINIMALISTA (SEM CARDS ARREDONDADOS)
+           ======================================================== */
+        .faq-section {
+            background: #ffffff;
+            padding: 7rem 0;
+            border-bottom: 1px solid #ebe5dc;
+        }
+        .faq-minimal-list {
+            max-width: 860px;
+            margin: 0 auto;
+            border-top: 1px solid #e8e3da;
+        }
+        .faq-minimal-item {
+            border-bottom: 1px solid #e8e3da;
+            transition: background 0.25s ease;
+        }
+        .faq-minimal-trigger {
+            width: 100%;
+            padding: 1.6rem 0.5rem;
+            background: transparent;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: left;
+            cursor: pointer;
+            gap: 1.5rem;
+        }
+        .faq-minimal-trigger span {
+            font-family: 'Sora', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: #1a1a1a;
+            line-height: 1.4;
+            transition: color 0.25s ease;
+        }
+        .faq-minimal-trigger:hover span {
+            color: var(--gold);
+        }
+        .faq-toggle-icon {
+            font-size: 0.85rem;
+            color: var(--gold);
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+        .faq-minimal-item.active .faq-toggle-icon {
+            transform: rotate(45deg);
+        }
+        .faq-minimal-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease, padding 0.35s ease;
+            padding: 0 0.5rem;
+        }
+        .faq-minimal-item.active .faq-minimal-answer {
+            max-height: 250px;
+            padding: 0 0.5rem 1.6rem 0.5rem;
+        }
+        .faq-minimal-answer p {
+            color: #555555;
+            font-size: 0.93rem;
+            line-height: 1.7;
+            margin: 0;
+            font-weight: 300;
+        }
+
+        /* ========================================================
+           PARA COMEÇAR A CONVERSA: LISTA PURA MINIMALISTA (SEM CARDS)
+           ======================================================== */
+        .prep-section {
+            background: #fbf9f6;
+            padding: 6.5rem 0;
+            border-bottom: 1px solid #ebe5dc;
+        }
+        .prep-simple-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.2rem 2.5rem;
+            max-width: 1040px;
+            margin: 0 auto;
+        }
+        .prep-simple-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.9rem;
+        }
+        .prep-simple-icon {
+            color: var(--gold);
+            font-size: 0.95rem;
+            margin-top: 0.25rem;
+            flex-shrink: 0;
+        }
+        .prep-simple-title {
+            font-family: 'Sora', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin: 0 0 0.25rem 0;
+        }
+        .prep-simple-desc {
+            font-size: 0.85rem;
+            color: #666666;
+            line-height: 1.5;
+            margin: 0;
+            font-weight: 300;
+        }
+        @media (max-width: 900px) {
+            .prep-simple-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.8rem;
+            }
+        }
+        @media (max-width: 600px) {
+            .prep-simple-grid {
+                grid-template-columns: 1fr;
+                gap: 1.4rem;
+            }
+        }
+
+        /* ========================================================
+           CONTATO: FORMULÁRIO PRIMEIRO, INFORMAÇÕES ABAIXO
+           ======================================================== */
+        .contact {
+            background: #ffffff;
+            padding: 7rem 0;
+        }
+        .contact-form-container {
+            max-width: 780px;
+            margin: 0 auto 5rem auto;
+        }
+        .contact-bottom-info {
+            border-top: 1px solid #ebe5dc;
+            padding-top: 4.5rem;
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+        .contact-info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem 2rem;
+        }
+        @media (max-width: 900px) {
+            .contact-info-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem 1.5rem;
+            }
+        }
+        @media (max-width: 600px) {
+            .contact-info-grid {
+                grid-template-columns: 1fr;
+                gap: 1.8rem;
+            }
+        }
+
+    
+        /* ========================================================
+           MENU MOBILE: ULTRA RESPONSIVO & DESIGN SYSTEM POPLAWSKI
+           ======================================================== */
+        @media (max-width: 992px) {
+            nav#navbar.nav {
+                padding: 1rem 5% !important;
+            }
+            nav#navbar.nav .nav-links {
+                display: none !important;
+            }
+            nav#navbar.nav .nav-links.active {
+                display: flex !important;
+                flex-direction: column !important;
+                position: absolute !important;
+                top: 100% !important;
+                left: 0 !important;
+                right: 0 !important;
+                background: #141414 !important;
+                padding: 2.2rem 2rem 2.8rem 2rem !important;
+                gap: 1.4rem !important;
+                box-shadow: 0 16px 36px rgba(0, 0, 0, 0.65) !important;
+                border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+                z-index: 9999 !important;
+            }
+            nav#navbar.nav.scrolled .nav-links.active {
+                background: #f5f1ec !important;
+                box-shadow: 0 16px 36px rgba(0, 0, 0, 0.15) !important;
+                border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
+            }
+            nav#navbar.nav .nav-toggle {
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: center !important;
+                align-items: center !important;
+                gap: 5px !important;
+                cursor: pointer !important;
+                padding: 8px !important;
+                width: 40px !important;
+                height: 40px !important;
+                z-index: 10000 !important;
+                border: none !important;
+                background: transparent !important;
+            }
+            nav#navbar.nav .nav-toggle span {
+                display: block !important;
+                width: 22px !important;
+                height: 2px !important;
+                background: #ffffff !important;
+                transition: transform 0.3s ease, opacity 0.3s ease, background 0.3s ease !important;
+            }
+            nav#navbar.nav.scrolled .nav-toggle span {
+                background: #1a1a1a !important;
+            }
+            nav#navbar.nav .nav-toggle.active span:nth-child(1) {
+                transform: translateY(7px) rotate(45deg) !important;
+            }
+            nav#navbar.nav .nav-toggle.active span:nth-child(2) {
+                opacity: 0 !important;
+            }
+            nav#navbar.nav .nav-toggle.active span:nth-child(3) {
+                transform: translateY(-7px) rotate(-45deg) !important;
+            }
+            nav#navbar.nav .nav-links a {
+                font-family: 'Sora', sans-serif !important;
+                font-size: 0.95rem !important;
+                letter-spacing: 0.12em !important;
+                text-transform: uppercase !important;
+                color: #ffffff !important;
+                padding: 0.5rem 0 !important;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+                display: block !important;
+                text-decoration: none !important;
+            }
+            nav#navbar.nav.scrolled .nav-links a {
+                color: #1a1a1a !important;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
+            }
+            nav#navbar.nav.scrolled .nav-links a:hover {
+                color: var(--gold) !important;
+            }
+            nav#navbar.nav .nav-cta {
+                margin-top: 0.8rem !important;
+                text-align: center !important;
+                border: 1px solid var(--gold) !important;
+                color: var(--gold) !important;
+                padding: 0.85rem 1.5rem !important;
+                font-weight: 600 !important;
+            }
+            nav#navbar.nav.scrolled .nav-cta {
+                background: #1a1a1a !important;
+                color: #ffffff !important;
+                border-color: #1a1a1a !important;
+            }
+            nav#navbar.nav .nav-mobile-social {
+                display: flex !important;
+                align-items: center !important;
+                gap: 1.2rem !important;
+                padding-top: 1rem !important;
+                border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+            }
+            nav#navbar.nav.scrolled .nav-mobile-social {
+                border-top-color: rgba(0, 0, 0, 0.08) !important;
+            }
+            nav#navbar.nav .nav-mobile-social a {
+                border: 1px solid rgba(255, 255, 255, 0.2) !important;
+                width: 40px !important;
+                height: 40px !important;
+                border-radius: 50% !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                color: #ffffff !important;
+                font-size: 1rem !important;
+            }
+            nav#navbar.nav.scrolled .nav-mobile-social a {
+                border-color: rgba(0, 0, 0, 0.15) !important;
+                color: #1a1a1a !important;
+            }
+        }
+
+    
+        /* Root & Nav Box Sizing Fix */
+        html {
+            overflow-x: clip !important;
+        }
+        body {
+            overflow-x: clip !important;
+            max-width: 100% !important;
+        }
+        nav#navbar.nav,
+        nav#navbar.nav * {
+            box-sizing: border-box !important;
+        }
+        nav#navbar.nav {
+            width: 100% !important;
+            max-width: 100vw !important;
+            left: 0 !important;
+            right: 0 !important;
+        }
+    
+    
+        /* ========================================================
+           FAIL-SAFE VISIBILITY GUARANTEE: NEVER DISAPPEAR
+           ======================================================== */
+        .reveal {
+            opacity: 1 !important;
+            transform: none !important;
+            visibility: visible !important;
+        }
+
+    
+        /* ========================================================
+           GARANTIA ABSOLUTA DE VISIBILIDADE (ZERO CONTEÚDO OCULTO)
+           ======================================================== */
+        .hero-label, 
+        .hero-heading, 
+        .hero-desc, 
+        .hero-actions, 
+        .reveal {
+            opacity: 1 !important;
+            transform: none !important;
+            visibility: visible !important;
+        }
+
     </style>
 </head>
 <body>
@@ -1024,7 +1954,7 @@
                 <a href="https://wa.me/5516997498543" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
             </li>
         </ul>
-        <div class="nav-toggle" id="navToggle" aria-label="Menu Mobile">
+        <div class="nav-toggle" id="navToggle" onclick="toggleMobileMenu(event)" aria-label="Menu Mobile">
             <span></span><span></span><span></span>
         </div>
     </nav>
@@ -1032,45 +1962,59 @@
     <!-- ==========================================
          HERO SECTION (Only ONE Button as Demanded)
          ========================================== -->
-    <section class="hero" id="hero">
+        <section class="hero" id="hero">
         <div class="hero-slides">
             <div class="hero-slide active">
-                <img src="assets/images/portfolio_hq/hero-bg.jpg" alt="Marmoraria Ônix - Fachada e Interiores de Alto Padrão" decoding="async">
+                <img src="assets/images/portfolio_hq/hero-bg.jpg" alt="Marmoraria Ônix - Fachada e Interiores de Alto Padrão" fetchpriority="high" loading="eager" decoding="async">
             </div>
             <div class="hero-slide">
                 <img src="assets/images/portfolio_hq/hero-slide-2.jpg" alt="Marmoraria Ônix - Obras Residenciais Nobres" decoding="async">
             </div>
         </div>
         <div class="hero-overlay"></div>
-        <div class="hero-content reveal visible">
-            <div class="hero-label">MARMORARIA EM MATÃO & REGIÃO</div>
-            <h1 class="hero-heading">A Arte da Rocha <strong>Sob Medida</strong></h1>
+
+        <div class="hero-content">
+            <div class="hero-label">MARMORARIA EM MATÃO &amp; REGIÃO</div>
+            <h1 class="hero-heading">
+                A Arte da Rocha<br><strong>Sob Medida</strong>
+            </h1>
             <p class="hero-desc">
                 Mármores nobres, granitos selecionados e quartzitos exóticos com acabamento de alta precisão em corte 45° para projetos que exigem excelência.
             </p>
             <div class="hero-actions">
-                <a href="#contact" class="btn btn-primary">
-                    Solicitar Orçamento <i class="fas fa-arrow-right" style="font-size:0.65rem"></i>
+                <a href="#contact" class="btn-primary">
+                    Solicitar Orçamento <i class="fas fa-arrow-right" style="font-size:0.6rem"></i>
                 </a>
             </div>
         </div>
+
+        <div class="hero-indicators">
+            <button class="hero-indicator active" aria-label="Slide 1"></button>
+            <button class="hero-indicator" aria-label="Slide 2"></button>
+        </div>
+
+        <div class="hero-scroll">
+            <span class="hero-scroll-text">Scroll</span>
+            <div class="hero-scroll-line"></div>
+        </div>
+
         <div class="hero-bottom">
             <div class="hero-stats">
                 <div class="hero-stat">
-                    <div class="hero-stat-number">+15</div>
-                    <div class="hero-stat-label">Anos de Tradição</div>
+                    <div class="hero-stat-number">+15 anos</div>
+                    <div class="hero-stat-label">de tradição</div>
                 </div>
                 <div class="hero-stat">
                     <div class="hero-stat-number">+1.200</div>
-                    <div class="hero-stat-label">Obras Concluídas</div>
+                    <div class="hero-stat-label">obras concluídas</div>
                 </div>
                 <div class="hero-stat">
                     <div class="hero-stat-number">100%</div>
-                    <div class="hero-stat-label">Corte em 45°</div>
+                    <div class="hero-stat-label">corte em 45°</div>
                 </div>
                 <div class="hero-stat">
-                    <div class="hero-stat-number">7</div>
-                    <div class="hero-stat-label">Cidades Atendidas</div>
+                    <div class="hero-stat-number">7 cidades</div>
+                    <div class="hero-stat-label">atendidas</div>
                 </div>
             </div>
         </div>
@@ -1286,48 +2230,7 @@
             </div>
 
             <!-- BLOCO "O QUE REUNIR" (EMBAIXO NA MESMA SEÇÃO, CONFORME SOLICITADO) -->
-            <div class="process-checklist-wrap reveal">
-                <div class="process-checklist-grid">
-                    <div>
-                        <span class="section-label">Para Começar a Conversa</span>
-                        <h3 class="section-title" style="font-size:2rem; margin-top:0.5rem; margin-bottom:1rem; color:#ffffff;">O que reunir</h3>
-                        <p style="color:rgba(255,255,255,0.7); font-size:0.92rem; line-height:1.8; font-weight:300;">
-                            Envie o que já estiver disponível. Esses itens ajudam a Marmoraria Ônix a compreender o ambiente, o escopo e a etapa da sua obra com máxima agilidade.
-                        </p>
-                        <div class="checklist-note">
-                            Esses elementos dão contexto ao entendimento inicial do escopo.
-                        </div>
-                    </div>
-
-                    <div class="checklist-items">
-                        <div class="checklist-item">
-                            <div class="checklist-icon"><i class="fas fa-check"></i></div>
-                            <span>Plantas ou desenhos disponíveis</span>
-                        </div>
-                        <div class="checklist-item">
-                            <div class="checklist-icon"><i class="fas fa-check"></i></div>
-                            <span>Referências do resultado desejado</span>
-                        </div>
-                        <div class="checklist-item">
-                            <div class="checklist-icon"><i class="fas fa-check"></i></div>
-                            <span>Medidas já disponíveis</span>
-                        </div>
-                        <div class="checklist-item">
-                            <div class="checklist-icon"><i class="fas fa-check"></i></div>
-                            <span>Fotos atuais do ambiente</span>
-                        </div>
-                        <div class="checklist-item">
-                            <div class="checklist-icon"><i class="fas fa-check"></i></div>
-                            <span>Escopo e ambiente a executar</span>
-                        </div>
-                        <div class="checklist-item">
-                            <div class="checklist-icon"><i class="fas fa-check"></i></div>
-                            <span>Momento atual da obra</span>
-                        </div>
-                    </div>
-                </div>
             </div>
-        </div>
     </section>
 
     <!-- ========================================================
@@ -1404,6 +2307,120 @@
     </section>
 
     <!-- ========================================================
+         SEÇÃO DEPOIMENTOS GOOGLE REVIEWS (PROVA SOCIAL)
+         ======================================================== -->
+    <section class="testimonials-section" id="depoimentos">
+        <div class="container">
+            <div class="reveal" style="text-align:center;">
+                <span class="section-label">Confiança Comprovada</span>
+                <h2 class="section-title">O que dizem os clientes e arquitetos que confiam na Ônix</h2>
+                <p class="section-subtitle" style="max-width:680px; margin: 0 auto;">
+                    Quem já passou pelo estresse de uma obra sabe o valor de encontrar uma marmoraria que honra a palavra, não atrasa e entrega o acabamento prometido no projeto.
+                </p>
+            </div>
+
+            <div class="testimonials-grid reveal">
+                <!-- Depoimento 1: Dra. Fernanda Alcântara -->
+                <div class="testimonial-card">
+                    <div>
+                        <div class="testimonial-header">
+                            <div class="testimonial-profile">
+                                <img src="assets/images/testimonials/avatar-fernanda.png" alt="Dra. Fernanda Alcântara" class="testimonial-avatar">
+                                <div class="testimonial-meta">
+                                    <h4 class="testimonial-name">Dra. Fernanda Alcântara</h4>
+                                    <p class="testimonial-subtitle">Harmonização Facial & Estética Avançada · Araraquara</p>
+                                    <div class="testimonial-rating">
+                                        <span class="rating-num">5,0</span>
+                                        <span class="rating-stars">★★★★★</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-google">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Avaliação no Google">
+                                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+                                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="testimonial-body">
+                            <p class="testimonial-quote">
+                                "O que mais nos surpreendeu foi a pontualidade cravada. O marceneiro terminou os gabinetes numa quarta e na sexta a equipe da Ônix já estava montando a nossa ilha cascata em quartzito. A junção em 45 graus ficou tão perfeita que não se sente nenhuma emenda ao passar a mão. Nossa clínica e residência viraram referências de acabamento."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Depoimento 2: Arq. Renato Castilho -->
+                <div class="testimonial-card">
+                    <div>
+                        <div class="testimonial-header">
+                            <div class="testimonial-profile">
+                                <img src="assets/images/testimonials/avatar-renato.jpg" alt="Arq. Renato Castilho" class="testimonial-avatar">
+                                <div class="testimonial-meta">
+                                    <h4 class="testimonial-name">Arq. Renato Castilho</h4>
+                                    <p class="testimonial-subtitle">Escritório de Arquitetura & Interiores · Ribeirão Preto</p>
+                                    <div class="testimonial-rating">
+                                        <span class="rating-num">5,0</span>
+                                        <span class="rating-stars">★★★★★</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-google">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Avaliação no Google">
+                                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+                                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="testimonial-body">
+                            <p class="testimonial-quote">
+                                "Como arquiteto em Ribeirão Preto, meu maior receio sempre foi a paginação dos veios na virada da bancada para a cascata. Com o Carlos Cesar da Ônix, nós abrimos a chapa inteira antes do corte para casar o desenho. A instalação foi cirúrgica, sem poeira dentro da casa recém-pintada e no esquadro exato da parede. É a minha marmoraria de confiança."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Depoimento 3: Marcos & Patrícia Rossi -->
+                <div class="testimonial-card">
+                    <div>
+                        <div class="testimonial-header">
+                            <div class="testimonial-profile">
+                                <img src="assets/images/testimonials/avatar-marcos.jpg" alt="Marcos Rossi" class="testimonial-avatar">
+                                <div class="testimonial-meta">
+                                    <h4 class="testimonial-name">Marcos & Patrícia Rossi</h4>
+                                    <p class="testimonial-subtitle">Condomínio Village Damha · São Carlos</p>
+                                    <div class="testimonial-rating">
+                                        <span class="rating-num">5,0</span>
+                                        <span class="rating-stars">★★★★★</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-google">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Avaliação no Google">
+                                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+                                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="testimonial-body">
+                            <p class="testimonial-quote">
+                                "Tivemos uma péssima experiência na casa anterior com mármore claro que manchou na primeira reunião de família. Na Ônix, eles nos explicaram o protocolo de impermeabilização térmica de fábrica. Já usamos a bancada gourmet há 9 meses direto, fazemos churrasco e recebemos amigos e a rocha continua com o mesmo brilho e toque de chapa nova."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ========================================================
          SECTION 4: SOBRE NÓS (TWO STACKED IMAGES & CONTRAST FIX)
          ======================================================== -->
     <section class="about" id="about">
@@ -1458,9 +2475,7 @@
                         <a href="#contact" class="btn btn-primary">
                             Falar com Carlos Cesar <i class="fas fa-arrow-right" style="font-size:0.65rem"></i>
                         </a>
-                        <div class="about-signature" style="font-style:italic; font-size:1.4rem; color:var(--gold);">
-                            Carlos Cesar Setin
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -1764,12 +2779,183 @@
         </div>
     </section>
 
+    <!-- ========================================================
+         SEÇÃO FAQ NINJA (DÚVIDAS FREQUENTES & OBJEÇÕES)
+         ======================================================== -->
+        <!-- ========================================================
+         SEÇÃO FAQ NINJA (DÚVIDAS FREQUENTES & OBJEÇÕES)
+         ======================================================== -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="reveal" style="text-align:center; max-width:700px; margin:0 auto 3.5rem auto;">
+                <span class="section-label">Tire suas Dúvidas</span>
+                <h2 class="section-title">Perguntas Frequentes</h2>
+                <p class="section-subtitle">
+                    Respostas diretas sobre prazos, corte 45°, impermeabilização e processo de medição para você planejar sua obra com segurança.
+                </p>
+            </div>
+
+            <div class="faq-minimal-list reveal">
+                <!-- FAQ 1 -->
+                <div class="faq-minimal-item">
+                    <button class="faq-minimal-trigger" onclick="toggleFaq(this)" aria-expanded="false">
+                        <span>Como funciona o prazo de entrega e instalação?</span>
+                        <i class="fas fa-plus faq-toggle-icon"></i>
+                    </button>
+                    <div class="faq-minimal-answer">
+                        <p>
+                            Após a medição técnica fina no canteiro (com alvenarias e marcenaria niveladas), o prazo médio de corte, usinagem e impermeabilização em nossa fábrica é de 10 a 15 dias úteis. A instalação é combinada diretamente com seu cronograma e dura de 1 a 3 dias dependendo do porte da residência.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-minimal-item">
+                    <button class="faq-minimal-trigger" onclick="toggleFaq(this)" aria-expanded="false">
+                        <span>Qual é a diferença real entre o corte em 45° da Ônix e o de outras marmorarias?</span>
+                        <i class="fas fa-plus faq-toggle-icon"></i>
+                    </button>
+                    <div class="faq-minimal-answer">
+                        <p>
+                            Muitas marmorarias cortam com discos manuais e colam com massa plástica de funilaria, que amarela e cria quinas ásperas. Na Ônix, nossa usinagem é guiada por réguas de precisão milimétrica e a fusão é realizada com resina epóxi estrutural pigmentada no tom exato da rocha. O toque é liso e contínuo, como se a peça fosse um monobloco maciço.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-minimal-item">
+                    <button class="faq-minimal-trigger" onclick="toggleFaq(this)" aria-expanded="false">
+                        <span>Vocês cobram taxa para fazer a medição técnica no local?</span>
+                        <i class="fas fa-plus faq-toggle-icon"></i>
+                    </button>
+                    <div class="faq-minimal-answer">
+                        <p>
+                            Para as cidades de Matão, Dobrada, Araraquara, São Carlos e Taquaritinga, a avaliação preliminar e o orçamento técnico são fornecidos sem custo com base nas plantas e medidas do cliente. Para visitas técnicas de medição fina com gabarito in loco, o valor da visita é 100% abatido como crédito no fechamento do pedido.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-minimal-item">
+                    <button class="faq-minimal-trigger" onclick="toggleFaq(this)" aria-expanded="false">
+                        <span>As pedras claras (como quartzitos e mármores) mancham com café, gordura ou vinho?</span>
+                        <i class="fas fa-plus faq-toggle-icon"></i>
+                    </button>
+                    <div class="faq-minimal-answer">
+                        <p>
+                            Todas as nossas peças saem da oficina após receberem protocolo técnico de impermeabilização profunda com selantes hidro-oleofóbicos ativados termicamente. Isso sela os microporos minerais e impede a penetração de líquidos. Além disso, entregamos orientações claras de cuidados para manter o brilho natural por toda a vida.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="faq-minimal-item">
+                    <button class="faq-minimal-trigger" onclick="toggleFaq(this)" aria-expanded="false">
+                        <span>Quais são as condições e formas de pagamento?</span>
+                        <i class="fas fa-plus faq-toggle-icon"></i>
+                    </button>
+                    <div class="faq-minimal-answer">
+                        <p>
+                            Oferecemos condições personalizadas para cada obra: pagamento facilitado via Pix com desconto especial de pontualidade, ou parcelamento no cartão de crédito em até 3x ou 6x conforme o valor global do projeto. Tudo formalizado com contrato e nota fiscal.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="faq-minimal-item">
+                    <button class="faq-minimal-trigger" onclick="toggleFaq(this)" aria-expanded="false">
+                        <span>Vocês executam o projeto a partir da planta do meu arquiteto?</span>
+                        <i class="fas fa-plus faq-toggle-icon"></i>
+                    </button>
+                    <div class="faq-minimal-answer">
+                        <p>
+                            Sim! Trabalhamos em parceria diária com arquitetos, designers de interiores e engenheiros calculistas. Recebemos seus arquivos em PDF, DWG ou croquis de medição, alinhamos as paginações de veios e garantimos fidelidade cirúrgica ao render aprovado pelo cliente.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <!-- ==========================================
          SECTION 7: CONTATO & FORMULÁRIO WHATSAPP
          ========================================== -->
+    
+    <!-- ========================================================
+         SEÇÃO PARA COMEÇAR A CONVERSA (ORIENTAÇÃO PRÉ-ORÇAMENTO)
+         ======================================================== -->
+        <!-- ========================================================
+         SEÇÃO PARA COMEÇAR A CONVERSA (ORIENTAÇÃO PRÉ-ORÇAMENTO)
+         ======================================================== -->
+    <section class="prep-section" id="para-comecar">
+        <div class="container">
+            <div class="reveal" style="text-align:center; max-width:760px; margin:0 auto 3.5rem auto;">
+                <span class="section-label">Para Começar a Conversa</span>
+                <h2 class="section-title">O que você pode nos enviar</h2>
+                <p class="section-subtitle">
+                    Envie apenas o que você já tiver em mãos. <strong>Nenhum desses itens é obrigatório para iniciar seu orçamento</strong> — se ainda não tiver medidas ou plantas prontas, não se preocupe: no WhatsApp conversamos sobre a sua ideia e te orientamos passo a passo sobre o que será necessário.
+                </p>
+            </div>
+
+            <div class="prep-simple-grid reveal">
+                <div class="prep-simple-item">
+                    <i class="fas fa-check prep-simple-icon"></i>
+                    <div>
+                        <h4 class="prep-simple-title">Plantas ou desenhos</h4>
+                        <p class="prep-simple-desc">Projeto do arquiteto ou um rascunho com medidas preliminares.</p>
+                    </div>
+                </div>
+
+                <div class="prep-simple-item">
+                    <i class="fas fa-check prep-simple-icon"></i>
+                    <div>
+                        <h4 class="prep-simple-title">Fotos ou referências</h4>
+                        <p class="prep-simple-desc">Imagens de bancadas, ilhas, cubas esculpidas ou acabamentos desejados.</p>
+                    </div>
+                </div>
+
+                <div class="prep-simple-item">
+                    <i class="fas fa-check prep-simple-icon"></i>
+                    <div>
+                        <h4 class="prep-simple-title">Fotos atuais do ambiente</h4>
+                        <p class="prep-simple-desc">Uma foto simples tirada do celular para vermos o espaço da obra.</p>
+                    </div>
+                </div>
+
+                <div class="prep-simple-item">
+                    <i class="fas fa-check prep-simple-icon"></i>
+                    <div>
+                        <h4 class="prep-simple-title">Ambientes a executar</h4>
+                        <p class="prep-simple-desc">Cozinha, ilha gourmet, lavatório esculpido, escadas ou soleiras.</p>
+                    </div>
+                </div>
+
+                <div class="prep-simple-item">
+                    <i class="fas fa-check prep-simple-icon"></i>
+                    <div>
+                        <h4 class="prep-simple-title">Medidas aproximadas</h4>
+                        <p class="prep-simple-desc">Dimensões estimadas para iniciarmos o dimensionamento prévio da chapa.</p>
+                    </div>
+                </div>
+
+                <div class="prep-simple-item">
+                    <i class="fas fa-check prep-simple-icon"></i>
+                    <div>
+                        <h4 class="prep-simple-title">Momento atual da obra</h4>
+                        <p class="prep-simple-desc">Etapa da construção e estimativa de quando deseja instalar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- ========================================================
+         SEÇÃO CONTATO & ORÇAMENTO (FORMULÁRIO PRIMEIRO, INFORMAÇÕES ABAIXO)
+         ======================================================== -->
     <section class="contact" id="contact">
         <div class="container">
-            <div class="reveal">
+            <div class="reveal" style="text-align:center; max-width:700px; margin:0 auto 3rem auto;">
                 <span class="section-label">Atendimento Exclusivo</span>
                 <h2 class="section-title">Solicite seu Orçamento</h2>
                 <p class="section-subtitle">
@@ -1777,76 +2963,9 @@
                 </p>
             </div>
 
-            <div class="contact-grid">
-                <!-- Informações e Endereços Oficiais -->
-                <div class="reveal">
-                    <!-- Endereço Matão -->
-                    <div class="contact-info-item">
-                        <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
-                        <div>
-                            <div class="contact-info-label">Unidade Matão / SP (Sede & Oficina)</div>
-                            <div class="contact-info-value">
-                                Av. Benício Pinto de Mendonça, 547 - Alto<br>Matão - SP, CEP 15997-082
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Endereço Dobrada -->
-                    <div class="contact-info-item">
-                        <div class="contact-info-icon"><i class="fas fa-tree"></i></div>
-                        <div>
-                            <div class="contact-info-label">Unidade Dobrada / SP</div>
-                            <div class="contact-info-value">
-                                Sítio dos Ipês — Dobrada - SP
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- WhatsApp -->
-                    <div class="contact-info-item">
-                        <div class="contact-info-icon"><i class="fab fa-whatsapp"></i></div>
-                        <div>
-                            <div class="contact-info-label">WhatsApp Oficial</div>
-                            <div class="contact-info-value">
-                                <a href="https://wa.me/5516997498543" target="_blank">(16) 99749-8543</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Telefone Fixo -->
-                    <div class="contact-info-item">
-                        <div class="contact-info-icon"><i class="fas fa-phone"></i></div>
-                        <div>
-                            <div class="contact-info-label">Telefone Fixo</div>
-                            <div class="contact-info-value">(16) 3394-2089</div>
-                        </div>
-                    </div>
-
-                    <!-- E-mail -->
-                    <div class="contact-info-item">
-                        <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
-                        <div>
-                            <div class="contact-info-label">E-mail</div>
-                            <div class="contact-info-value">
-                                <a href="mailto:carloscesarsetin@hotmail.com">carloscesarsetin@hotmail.com</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Instagram -->
-                    <div class="contact-info-item">
-                        <div class="contact-info-icon"><i class="fab fa-instagram"></i></div>
-                        <div>
-                            <div class="contact-info-label">Instagram Oficial</div>
-                            <div class="contact-info-value">
-                                <a href="https://instagram.com/onix._marmoraria" target="_blank">@onix._marmoraria</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Formulário com Classes Nativas do Poplawski Design System -->
-                <form class="contact-form reveal" onsubmit="handleQuoteSubmit(event)">
+            <!-- Formulário Centralizado -->
+            <div class="contact-form-container reveal">
+                <form class="contact-form" onsubmit="handleQuoteSubmit(event)">
                     <div class="form-row">
                         <div class="form-group">
                             <label>Nome Completo *</label>
@@ -1894,13 +3013,82 @@
                         <textarea id="formMessage" placeholder="Conte-nos sobre o que você busca, planta, medidas ou detalhes da sua obra..."></textarea>
                     </div>
 
-                    <button type="submit" class="form-submit" style="background:#25d366; border-color:#25d366; color:#ffffff; font-weight:600; font-size:1rem; padding:1.1rem; display:flex; align-items:center; justify-content:center; gap:0.6rem;">
-                        <i class="fab fa-whatsapp" style="font-size:1.3rem;"></i> Enviar via WhatsApp
+                    <button type="submit" class="form-submit" style="width:100%; display:flex; align-items:center; justify-content:center; gap:0.6rem; padding:1.15rem;">
+                        Solicitar Orçamento via WhatsApp <i class="fas fa-arrow-right" style="font-size:0.7rem"></i>
                     </button>
-                    <p style="font-size:0.75rem; color:#888888; text-align:center; margin-top:0.4rem;">
+                    <p style="font-size:0.75rem; color:#888888; text-align:center; margin-top:0.6rem;">
                         Ao clicar, você será redirecionado para o WhatsApp com todos os dados preenchidos.
                     </p>
                 </form>
+            </div>
+
+            <!-- Informações e Endereços Oficiais (Abaixo do Formulário, Antes do Rodapé) -->
+            <div class="contact-bottom-info reveal">
+                <div class="contact-info-grid">
+                    <!-- Endereço Matão -->
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <div class="contact-info-label">Unidade Matão / SP (Sede &amp; Oficina)</div>
+                            <div class="contact-info-value">
+                                Av. Benício Pinto de Mendonça, 547 - Alto<br>Matão - SP, CEP 15997-082
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Endereço Dobrada -->
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-tree"></i></div>
+                        <div>
+                            <div class="contact-info-label">Unidade Dobrada / SP</div>
+                            <div class="contact-info-value">
+                                Sítio dos Ipês — Dobrada - SP
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- WhatsApp -->
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fab fa-whatsapp"></i></div>
+                        <div>
+                            <div class="contact-info-label">WhatsApp Oficial</div>
+                            <div class="contact-info-value">
+                                <a href="https://wa.me/5516997498543" target="_blank" rel="noopener">(16) 99749-8543</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Telefone Fixo -->
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <div class="contact-info-label">Telefone Fixo</div>
+                            <div class="contact-info-value">(16) 3394-2089</div>
+                        </div>
+                    </div>
+
+                    <!-- E-mail -->
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <div class="contact-info-label">E-mail</div>
+                            <div class="contact-info-value">
+                                <a href="mailto:carloscesarsetin@hotmail.com">carloscesarsetin@hotmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Instagram -->
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fab fa-instagram"></i></div>
+                        <div>
+                            <div class="contact-info-label">Instagram Oficial</div>
+                            <div class="contact-info-value">
+                                <a href="https://instagram.com/onix._marmoraria" target="_blank" rel="noopener">@onix._marmoraria</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -2041,6 +3229,120 @@
             const waUrl = `https://wa.me/5516997498543?text=${text}`;
             window.open(waUrl, '_blank');
         }
+    
+        // FAQ Ninja Accordion Functionality
+        function toggleFaq(btn) {
+            const item = btn.closest('.faq-item');
+            const isActive = item.classList.contains('active');
+            
+            // Close all
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+            
+            // If wasn't active, open it
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        }
+
     </script>
+
+    
+    <!-- Controlador Central do Cabeçalho e Menu Mobile -->
+    <script>
+    (function() {
+        // Toggle de Scroll da Navbar
+        function updateNavScroll() {
+            var top = window.pageYOffset || 
+                      document.documentElement.scrollTop || 
+                      (document.body ? document.body.scrollTop : 0) || 
+                      window.scrollY || 0;
+            var nav = document.getElementById('navbar');
+            if (nav) {
+                if (top > 40) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
+            }
+            var btt = document.getElementById('backToTop');
+            if (btt) {
+                if (top > 400) {
+                    btt.classList.add('visible');
+                } else {
+                    btt.classList.remove('visible');
+                }
+            }
+        }
+
+        window.addEventListener('scroll', updateNavScroll, { passive: true });
+        document.addEventListener('scroll', updateNavScroll, { passive: true });
+        window.addEventListener('DOMContentLoaded', updateNavScroll);
+        window.addEventListener('load', updateNavScroll);
+
+        // Controlador Seguro do Menu Mobile (Único e sem duplicidade)
+        window.toggleMobileMenu = function(e) {
+            if (e) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+            var navToggle = document.getElementById('navToggle');
+            var navLinks = document.getElementById('navLinks');
+            if (navToggle && navLinks) {
+                var isOpen = navLinks.classList.contains('active');
+                if (isOpen) {
+                    navToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    document.body.style.overflow = '';
+                } else {
+                    navToggle.classList.add('active');
+                    navLinks.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+            }
+        };
+
+        // Fechar ao clicar em qualquer link da navegação
+        document.querySelectorAll('.nav-links a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                var navToggle = document.getElementById('navToggle');
+                var navLinks = document.getElementById('navLinks');
+                if (navToggle) navToggle.classList.remove('active');
+                if (navLinks) navLinks.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Fechar se clicar fora do menu
+        document.addEventListener('click', function(e) {
+            var navbar = document.getElementById('navbar');
+            var navToggle = document.getElementById('navToggle');
+            var navLinks = document.getElementById('navLinks');
+            if (navLinks && navLinks.classList.contains('active')) {
+                if (navbar && !navbar.contains(e.target)) {
+                    navToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            }
+        });
+
+        // FAQ Toggle Minimalista
+        window.toggleFaq = function(btn) {
+            var item = btn.closest('.faq-minimal-item');
+            if (!item) return;
+            var isActive = item.classList.contains('active');
+            document.querySelectorAll('.faq-minimal-item').forEach(function(i) {
+                i.classList.remove('active');
+                var b = i.querySelector('.faq-minimal-trigger');
+                if (b) b.setAttribute('aria-expanded', 'false');
+            });
+            if (!isActive) {
+                item.classList.add('active');
+                btn.setAttribute('aria-expanded', 'true');
+            }
+        };
+    })();
+    </script>
+
 </body>
 </html>
